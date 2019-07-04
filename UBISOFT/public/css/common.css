@@ -1,0 +1,31 @@
+/**********基础属性重置**********/
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family: "Microsoft YaHei";
+  font-size:14px;
+  color: #454545;
+  min-width:768px;
+}
+ul{
+  list-style:none;
+}
+a{
+  display:inline-block;
+  text-decoration:none;
+}
+img{
+  vertical-align:middle;
+}
+button{
+  border:0;
+}
+input{
+  outline:none;
+  box-shadow: none;
+}
+
+.clearfix:after{
+  content:"";
+  display:block;
+  clear:both;
+}

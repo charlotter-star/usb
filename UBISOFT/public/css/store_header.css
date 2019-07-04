@@ -1,0 +1,340 @@
+/******************************商城顶部导航***********************************/
+
+/******************************商城顶部导航***********************************/
+
+header{
+  padding:35px 60px 20px;
+  background:#fff;
+}
+
+.grid-x{
+  display:flex;
+  justify-content:space-between;
+}
+.grid-x>div{
+  height:45px;
+}
+.logo{
+  width:25%;
+}
+.logo>a{
+  width:185px;
+}
+/*******搜索框样式********/
+.searchbar{
+  width:40%;
+  position:relative;
+  margin-left:50px;
+}
+.searchbar>.searchbox{
+  width:90%;height:100%;
+  border-radius:25px;
+  border:1px solid #929db6;
+  padding:0 45px;
+  background:#fff;
+}
+.searchicon{
+  border:0;
+  background:#fff;
+  width:15px;
+  position:absolute;
+  top:15px;left:20px;
+}
+.searchicon path{
+  fill: currentColor;
+}
+/*******用户栏样式*******/
+.userbar{
+  width:350px;
+  text-align:right;
+  position:relative;
+  padding-right:20px;
+}
+.userbar-list a{
+  height:45px;
+  color:#000;
+  line-height:45px;
+}
+.shoppingcart{
+  margin-left:30px;
+}
+.shoppingcart:hover + .minicart,.minicart:hover{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0px);
+}
+.userbar-list span{
+  display:inline-block;
+  width:30px;height:30px;
+}
+.userbar-list svg{
+  vertical-align: middle;
+}
+.userbar-list path{
+  fill: #35c1cf;
+}
+
+.cart-quantity{
+  background:#c3dbe0;
+  border-radius:50%;
+  text-align:center;
+  line-height: 30px;
+}
+/*******************小型购物车框*******************/
+.minicart{
+  width:480px;
+  background: #e4ecec;
+  position:absolute;
+  top:45px;right:0;
+  z-index:20;
+  opacity:0;
+  visibility: hidden;
+  transform:translateY(5px);
+  transition:opacity,transform 0.2s linear;
+}
+.placeholder{
+  height:10px;
+}
+.placeholder:before{
+  content:"";
+  display:block;
+  position:absolute;
+  top:0px;right:25px;
+  border-left:10px solid transparent;
+  border-right:10px solid transparent;
+  border-bottom:10px solid #1581a5;
+}
+.minicart-header{
+  padding:15px 20px;
+  background: linear-gradient(110deg,#4268a6,#008aa4);
+}
+.minicart-title{
+  text-align: left;
+  font-size:16px;
+  color:#fff;
+}
+.minicart-content{
+  text-align:center;
+  font-size:1.125rem;
+  color:#929db6;
+}
+.empty-minicart-message{
+  padding-top:20px;
+}
+.empty-minicart-image{
+  padding:12px 0;
+  display:flex;
+  justify-content: center;
+}
+.empty-minicart-button{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.button-wrapper{
+  padding:10px 0 45px;
+}
+.button-wrapper>a{
+  background:#3bd373;
+  border-color:#3bd373;
+  border-radius:50px;
+  font-size:1rem;
+  width:160px;
+  color:#fff;
+}
+
+
+
+
+/*************导航栏************/
+.navigation-wrapper{
+  display:flex;
+}
+.header-menu{
+  margin-top:20px;
+}
+.menu-category{
+  margin-left:-24px;
+  position:relative;
+}
+.menu-category>li{
+  display:inline-block;
+}
+/********主导航的样式*********/
+.main-nav-item{
+  font-size:16px;
+  color: #008aa4;
+  padding:13px 28px;
+  background: linear-gradient(to right,#4268a6 100%,transparent 100%);
+  background-size: 0% 100%;
+  background-position: right left;
+  background-repeat: no-repeat;
+  transition:background-size 0.3s ease-in-out;
+}
+.main-nav-item:hover{
+  background-size: 100% 100%;
+  color:#35c1cf;
+}
+/***********大菜单导航的样式**************/
+.main-submenu{
+  height:525px;
+  display:flex;
+  position:absolute;
+  top:100%;left:0;
+  visibility: hidden;
+  background-color: rgba(229,232,240,.9);
+  z-index:10;
+}
+.main-submenu{
+  width:90vw;
+}
+.level-1-wrapper{
+  width:calc(90vw*.20);
+}
+.level-1-item:hover + .level-2-wrapper,
+.level-2-wrapper:hover{
+  width:calc(90vw*.23);
+}
+.level-2-item:hover + .level-3-wrapper,
+.level-3-wrapper:hover{
+  width:calc(90vw*.28);
+}
+/* @media screen and (min-width:992px){
+  
+}
+@media screen and (max-width:992px){
+  .main-submenu{
+    width:768px;
+  }
+  .level-1-wrapper{
+    width:calc(768px*.20);
+  }
+  .level-1-item:hover + .level-2-wrapper,
+  .level-2-wrapper:hover{
+    width:calc(768px*.23);
+  }
+  .level-2-item:hover + .level-3-wrapper,
+  .level-3-wrapper:hover{
+    width:calc(768px*.28);
+  }
+}
+@media screen and (max-width:768px){
+  .main-submenu{
+    width:666px;
+  }
+  .level-1-wrapper{
+    width:calc(666px*.20);
+  }
+  .level-1-item:hover + .level-2-wrapper,
+  .level-2-wrapper:hover{
+    width:calc(666px*.23);
+  }
+  .level-2-item:hover + .level-3-wrapper,
+  .level-3-wrapper:hover{
+    width:calc(666px*.28);
+  }
+} */
+/***********大菜单显示和隐藏************/
+.main-nav-item:hover + .main-submenu,
+.main-submenu:hover{
+  visibility:visible;
+}
+
+/*************子菜单标题样式***************/
+.main-submenu .category-title,
+.level-2-wrapper>.category-subtitle,
+.level-3-wrapper>.category-subtitle{
+  width:0;
+  color: #fff;
+  background: #4268a6;
+  font-size:18px;
+  font-size: .875rem;
+  height:54px;
+  line-height: 54px;
+  overflow: hidden;
+}
+/************子菜单标题过渡效果***************/
+.main-nav-item:hover + .main-submenu .category-title,
+.main-submenu:hover .category-title,
+.level-1-item:hover + .level-2-wrapper>.category-subtitle,
+.level-2-wrapper:hover>.category-subtitle,
+.level-2-item:hover + .level-3-wrapper>.category-subtitle,
+.level-3-wrapper:hover>.category-subtitle{
+  visibility:visible;
+  width:100%;
+  padding:0 24px;
+  transition:all 0.3s ease-in-out 0.3s;
+}
+
+/*************子菜单列表的样式*************/
+.main-submenu .level-1, 
+.main-submenu .level-2, 
+.main-submenu .level-3{
+  background: #e5e8f0;
+  padding:10px 0 25px;
+  height:0;
+  opacity: 0;
+  overflow: hidden;
+}
+/********** 子菜单列表由上到下显出 ************/
+.main-nav-item:hover + .main-submenu .level-1,.main-submenu:hover .level-1,
+.level-1-item:hover + .level-2-wrapper .level-2,.level-2-wrapper:hover .level-2,
+.level-2-item:hover + .level-3-wrapper .level-3,.level-3-wrapper:hover .level-3{
+  height:calc(100% - 54px);
+  transition:all 0.5s ease-in-out 0.6s;
+  opacity:1 ;
+}
+
+/************子菜单列表每个选项的样式及过渡***************/
+.main-submenu ul a {
+  width: 100%;
+  font-size: .9375rem;
+  font-family: "Ubisoft Sans Regular",Arial,sans-serif;
+  color: #000;
+  padding: 6px 35px 5px 21px;
+}
+.main-submenu ul a:hover{
+  background:#f2f4f8;
+}
+
+/*************每列子菜单的偏移及宽度变化**************/
+.level-1-wrapper,
+.level-2-wrapper,
+.level-3-wrapper{
+  height:100%;
+  position:absolute;
+  top:0px;
+}
+.level-1-wrapper{
+  left:0;
+}
+/********列表二的宽度变化*******/
+.level-2-wrapper{
+  width:0;
+  left:100%;
+}
+.level-1-item:hover + .level-2-wrapper,
+.level-2-wrapper:hover{
+  transition-delay:0.3s;
+}
+/********列表三的宽度变化********/
+.level-3-wrapper{
+  width:0;
+  left:100%;
+}
+.level-2-item:hover + .level-3-wrapper,
+.level-3-wrapper:hover{
+  transition-delay:0.3s;
+}
+
+.main-submenu ul{
+  overflow: auto;
+}
+.main-submenu ul>li:last-child{
+  position: absolute;
+  bottom:20px;
+}
+.main-submenu ul>li:last-child>a{
+  color:#35c1cf;
+  text-decoration:underline;
+}

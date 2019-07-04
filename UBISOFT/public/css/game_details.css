@@ -1,0 +1,425 @@
+
+
+
+/*游戏商品头部主要内容样式*/
+.product-top-content {
+  padding-top: 320px;
+  position: relative;
+}
+
+.product-main-section{
+  padding:0 35px 30px;
+}
+.product-main-section .product-main-content{
+  padding-left:40px;
+}
+
+.product-top-content .game-img-lg {
+  width: 100%;
+  height: 470px;
+  position: absolute;
+  top: 0;
+}
+.product-top-content .game-img-lg::after{
+  content:"";
+  position:absolute;
+  top:0;
+  width:100%;
+  height:100%;
+  box-shadow:0px -300px 300px -150px #000 inset;
+}
+.product-top-content .game-img-lg img {
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 100%;
+  
+}
+
+.product-top-content .product-main-section {
+  position: relative;
+  display: flex;
+  margin:0 auto;
+}
+
+.product-top-content .product-main-left {
+  width: 20%;
+  min-width:200px;
+  margin-left: 8%;
+}
+
+
+.product-top-content .product-image img {
+  width: 100%;
+}
+
+.product-advantages-header {
+  color: #35c1cf;
+  font-family: "Ubisoft Sans Bold", Arial, sans-serif;
+  margin: 20px 0;
+  font-size: 1.125rem;
+}
+
+.product-advantages-list{
+  font-size:16px;
+  padding-left:25px;
+}
+.product-advantages-list li{
+  color: #929db6;
+  margin-bottom: 5px;
+  position: relative;
+  display: inline-flex;
+  width:100%;
+}
+.product-advantages-list li span{
+  color: #edc800;
+} 
+.product-advantages-list svg {
+  width: 15px;
+  height: 15px;
+}
+
+.product-advantages-list .product-advantages-list-pin{
+  display: inline-flex;
+  position: absolute;
+  top: 2px;
+  left: -25px;
+} 
+.product-advantages-list li .has-tooltip{
+  display:inline-flex;
+}
+.product-advantages-list li .tooltip-content{
+  position:absolute;
+  top:100%;right: 0;
+  font-size: .8125rem;
+  margin: 10px 0 0;
+  padding: 5px;
+  min-width: 120px;
+  visibility: hidden;
+  opacity: 0;
+  background: #e4ecec;
+  text-align: center;
+  color: #000;
+  transform: translateY(5px);
+  transition: all 200ms linear;
+}
+.product-advantages-list li .tooltip-trigger:hover+.tooltip-content{
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/*商品主要内容*/
+.product-main-content{
+  color: #fff;
+  width:83.3333%;
+}
+.product-name-container{
+  position: relative;
+  padding-bottom:70px;
+}
+/*商品名称*/
+.product-name{
+  margin-bottom: 10px;
+  font-size: 3.75rem;
+  line-height: 3.75rem;
+  position:absolute;
+  bottom:0;
+}
+/*商品版本*/
+.product-edition{
+  font-size: 1.5625rem;
+  line-height: 1.75rem;
+  margin-bottom: 20px;
+}
+/*商品的发行时间*/
+.product-release-date{
+  position: relative;
+  margin-bottom: 35px;
+}
+.product-release-date .release-date{
+  padding-left:30px;
+}
+.product-release-date .svg-wrapper{
+  position:absolute;
+  left:0;
+}
+.product-release-date .svg-wrapper svg{
+  width:20px;height:20px;
+}
+.product-release-date .svg-wrapper path{
+  fill:#fff !important
+}
+
+/*商品选择区*/
+.product-select{
+  display:flex;
+  flex-wrap: wrap;
+  
+}
+.product-select .product-select-left{
+  width:50%;
+  padding-right:40px;
+}
+
+/*商品简介段落*/
+.product-first-paragraph{
+  color:#929db6;
+  font-size:15px;
+  pointer-events: all;
+  overflow-x: hidden;
+  max-width: 100%;
+  color: #929db6;
+  text-align: justify;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  margin-bottom:16px;
+}
+/*选择平台和选择规格*/
+.product-select-platform,
+.product-select-edition{
+  font-size:16px;
+  margin-bottom:10px;
+}
+.product-select-platform p,
+.product-select-edition p{
+  color:#000;
+  margin-bottom:5px;
+}
+.product-select-edition p{
+  font-weight: 700;
+}
+.product-select-platform p span,
+.product-select-edition p span{
+  font-weight: 400
+}
+.product-select-platform button,
+.product-select-edition button{
+  color:#35c1cf;
+  background:transparent;
+  display: inline-block;
+  height: 35px;
+  font-size: .9375rem;
+  line-height: 35px;
+  border: 1px solid #35c1cf;
+  padding: 0 15px;
+  margin-right: 10px;
+  margin-bottom: 10px; 
+}
+.product-select-platform button.selected,
+.product-select-edition button.selected{
+  color: #fff;
+  background-color: #35c1cf;
+}
+
+.product-select .product-select-right{
+  width:30%;
+  min-width:300px;
+}
+
+.product-select-right .add-shopping-cart-container{
+  background-color: #fff;
+  padding: 20px 35px;
+  text-align: center;
+  margin-top:40px;
+}
+.add-shopping-cart-container .product-price span{
+  color:#000;
+  font-size:28px;
+  line-height: 1.5;
+}
+.add-shopping-cart-container .add-shopping-cart{
+  border-radius: 26px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+button.add-shopping-cart::after,
+button.add-shopping-cart::before{
+  content:"新增到购物车";
+}
+button.add-shopping-cart.selected{
+  border: 2px solid #fff;
+  background: #c8cedd;
+  border-color: #c8cedd;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+/*按钮基本样式*/
+button.btn-hover-style{
+  background: #3bd373;
+  border:2px solid #3bd373;
+  color: #fff;
+  font-size:16px;
+  line-height: 1.3;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+button.btn-hover-style::after,
+button.btn-hover-style::before{
+  display:block;
+  position:absolute;
+  width:100%;
+  left:50%;
+  transition:0.15s;
+}
+button.btn-hover-style span{
+  visibility: hidden;
+  opacity: 0;
+}
+button.btn-hover-style::before{
+  top:-20%;
+  transform: translate(-50%,0);
+  opacity: 0;
+  visibility: hidden;
+}
+button.btn-hover-style::after{
+  top:50%;
+  transform: translate(-50%,-50%);
+  opacity: 1;
+  visibility: visible;
+}
+button.btn-hover-style:not(.selected):hover{
+  background: #60e691;
+  border-color: #60e691;
+  color: #fff;
+}
+button.btn-hover-style:not(.selected):hover::before{
+  top:50%;
+  transform: translate(-50%,-50%);
+  opacity: 1;
+  visibility: visible;
+}
+button.btn-hover-style:not(.selected):hover::after{
+  top:120%;
+  transform: translate(-50%,-100%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+
+
+@media screen and (max-width:996px) {
+  .product-select .product-select-left{
+    width:100%;
+  }
+  .product-select .product-select-right{
+    width:50%;
+  }
+  .product-top-content .product-main-left {
+    width:45%;
+    margin-left:20px;
+  } 
+  .product-select-right .add-shopping-cart-container{
+    margin-top:20px;
+  }
+}
+
+
+
+
+/****粘性导航****/
+.sticky-navigation-wrapper{
+  background: linear-gradient(110deg,#4268a6,#008aa4);
+  transition: all 300ms ease;
+}
+.sticky-navigation-wrapper ul{
+  display:flex;
+  justify-content:center;
+  flex-wrap: wrap;
+  width:100%;
+  position: relative;
+}
+.sticky-navigation-wrapper ul li a{
+  padding: 15px 22px;
+  color: #8efbff;
+  font-size:16px;
+  transition: color .2s ease-in;
+}
+.sticky-navigation-wrapper ul li a:hover{
+  color:#fff;
+}
+.sticky-navigation-wrapper li:last-child{
+  position: absolute;
+  right:0;
+  margin:0;
+}
+.sticky-navigation-wrapper .add-shopping-cart{
+  width:140px;height:55px;
+  padding: 16px 22px;
+  font-size:16px;
+}
+
+
+.product-details{
+  display:flex;
+  justify-content: center;
+}
+.product-media{
+  width:91.66667%;
+  padding-top:40px;
+}
+.details-title{
+  margin-top: 0;
+  margin-bottom: 45px;
+  color: #000;
+  font-size: 1.875rem;
+  text-transform: none;
+  font-weight: 400;
+  font-size:30px;
+  position:relative
+}
+.details-title::after{
+  content: '';
+  width:45px;height:5px;
+  background:#008aa4;
+  position: absolute;
+  left: 3px;
+  bottom:-10px;
+}
+
+/**游戏媒体部分**/
+.media-image-wrapper{
+  display:flex;
+}
+.media-image-wrapper>ul{
+  flex-grow: 1;
+}
+.media-image-wrapper>ul>li{
+  position: relative;
+}
+.media-image-wrapper>ul>li::after{
+  content:"";
+  display:block;
+  position:absolute;
+  transition:0.3s;
+  top:0;left:0;
+  bottom:0;right:0;
+  cursor:pointer;
+}
+.media-image-wrapper>ul>li:hover::after{
+  background-color: #35c1cf;
+  opacity: .8;
+}
+.media-image-wrapper img{
+  width:100%;
+}
+.media-image-wrapper>ul>li:hover .svg-wrapper{
+  visibility: visible
+}
+.media-image-wrapper>ul>li .svg-wrapper{
+  position:absolute;
+  top:50%;left:50%;
+  transform: translate(-50%,-50%);
+  visibility: hidden;
+  z-index: 10;
+}
+.media-image-wrapper>ul>li .svg-wrapper svg{
+  width: 35px;
+  height: 35px;
+}

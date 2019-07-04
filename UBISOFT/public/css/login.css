@@ -1,0 +1,119 @@
+
+body{
+  color: #616161;
+}
+
+.login{
+  display:flex;
+  justify-content:center;
+}
+.login-box{
+  width:60%;
+  max-width:400px;
+}
+.logo{
+  margin:25px 0;
+  text-align: center;
+}
+.login-title{
+  font-size:27px;
+  margin:18px 0 30px;
+}
+.form-group>div{
+  margin-bottom:15px;
+}
+#email,#upwd{
+  display:block;
+  padding:6px 12px;
+  width:100%;
+}
+#email+span,#upwd+span{
+  color:#f20;
+  font-size:14px;
+}
+.btn-login{
+  float:left;
+  padding:8px 24px;
+  color:#fff;
+  background-color: #7396ce;
+  border-color: #6088c7;
+  cursor:pointer;                                    
+}
+.btn-login:hover{
+  background-color: #557fc3;
+  border-color: #3d68ae;
+}
+#forget-pwd{
+  float:right;
+  padding:8px 12px;
+  font-size:12px;
+  font-weight: bold;
+  color:#004b98;
+}
+#forget-pwd:hover{
+  color: #00254c;
+  text-decoration: underline;
+}
+
+.btn-reg{
+  text-align: center;
+}
+.btn-reg>a{
+  width:100%;
+  padding:8px 0;
+  color:#fff;
+  background-color: #7396ce;
+  border-color: #6088c7;
+  cursor:pointer;
+  margin:15px 0;
+}
+.btn-reg>a:hover{
+  background-color: #557fc3;
+  border-color: #3d68ae;
+}
+
+.external{
+  width:100%;
+  padding:10px 0;
+  font-size:0;
+}
+.external>div{
+  width:25%;
+  display:inline-block;
+  padding:0 5px;
+}
+.external a{
+  width:100%;
+  height:35px;
+  border:1px solid #ccc;
+}
+.external a:hover{
+  border-color: #adadad;
+}
+.external>div:nth-child(1) a{
+  background:url('../logreg_img/live-connect.png') no-repeat center center;
+  background-size:contain;
+}
+.external>div:nth-child(2) a{
+  background:url('../logreg_img/psn-connect.png') no-repeat center center;
+  background-size:contain;
+}
+.external>div:nth-child(3) a{
+  background:url('../logreg_img/twitch-connect.png') no-repeat center center;
+  background-size:contain;
+}
+.external>div:nth-child(4) a{
+  background:url('../logreg_img/fb-connect.png') no-repeat center center;
+  background-size:contain;
+}
+
+
+.hidden{display:none}
+.show{display:block;}
+
+.vali-warn{
+  border:1px solid red;
+}
+
+
+

@@ -1,0 +1,778 @@
+<header id="header">
+    <div class="grid-x">
+      <div class="logo">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150">
+            <path d="M104.033 82.966c-8.482 19.127-25.965 29.167-44.573 28.908-35.745-1.731-46.131-42.843-22.243-57.643l1.038 1.039c-.433.52-1.817 1.644-4.068 5.972-2.596 5.28-3.375 10.559-3.116 13.848 1.905 28.734 42.237 34.533 56.172 6.145C104.985 42.287 57.989 2.82 16.358 33.026l-.952-.952C26.398 15.024 47.776 7.321 68.2 12.428c31.332 7.79 48.122 40.245 35.832 70.538m-33.408-.606c-2.856 4.154-7.703 6.838-13.156 6.838-8.828 0-16.012-7.098-16.012-15.926 0-8.395 6.578-15.32 14.887-15.925 5.193-.173 10.04 2.597 12.29 7.097 2.51 4.847 1.558 10.819-2.25 14.887 1.298.952 2.77 1.99 4.24 3.03M14.628 71.8c-.779 6.318-.26 8.309-.26 9.088l-1.384.519c-.52-1.039-1.905-4.674-2.51-9.607C8.915 53.02 21.81 36.056 41.458 32.853c18.002-2.596 35.225 8.482 39.293 24.061l-1.385.52c-.432-.433-1.211-1.731-3.894-4.501-21.81-21.724-55.912-11.77-60.845 18.868m102.995-10.473C116.323-.902 33.235-24.01 1.212 34.238c1.384 1.039 3.375 2.424 4.76 3.376a62.228 62.228 0 0 0-5.02 15.492A59.657 59.657 0 0 0 0 63.58C0 95.862 26.311 122 58.768 122c32.456 0 58.767-26.138 58.767-58.421.173-.693.173-1.472.087-2.25M358.74 60.763c0 24.9-17.897 43.834-43.056 43.834-25.764 0-43.056-18.502-43.056-40.895 0-14.525 5.706-25.073 14.006-31.99l-2.94-2.939c6.399-6.657 18.157-11.845 31.99-11.845 25.16 0 43.056 19.108 43.056 43.835zm-18.675 0c0-15.217-9.683-26.37-24.467-26.37-8.56 0-15.044 3.285-18.848 7.522l2.94 2.94c-4.496 3.717-8.473 8.991-8.473 18.242 0 12.796 9.078 24.122 24.467 24.122 14.698-.087 24.381-11.24 24.381-26.456zM412.776 103.127l-15.821-33.2h-9.338v33.2h-18.415V18.398h31.816c16.86 0 27.84 10.807 27.84 25.765 0 10.548-5.36 19.02-14.439 23.084l18.07 35.794h-19.713zm-25.159-48.244h13.315c6.138 0 10.029-3.977 10.029-10.202 0-6.224-3.89-10.202-10.03-10.202h-13.314zM266.922 35.776h-23.69v67.264h-18.415V35.776h-23.862V18.398h65.967zM170.608 52.636c14.525 5.1 22.047 11.585 22.047 24.727 0 17.55-13.401 27.234-29.31 27.234-14.61 0-25.937-6.571-30.606-18.675l14.612-10.894c2.68 7.608 9.597 12.364 16.427 12.364 6.052 0 10.375-3.286 10.375-8.733 0-5.1-3.286-8.213-15.39-12.622-13.055-4.756-22.738-11.24-22.738-25.333 0-13.573 11.24-23.862 27.58-23.862 12.969 0 22.998 5.187 27.753 15.476L176.746 42.52c-2.766-6.311-7.176-9.77-13.833-9.77-5.533 0-9.683 3.026-9.683 7.35.086 5.014 4.669 8.04 17.378 12.536zM460.933 35.776v17.897h34.756V67.68h-34.756v17.897h39.598v17.465h-58.013V18.31h56.976v17.465z"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="searchbar">
+        <input class="searchbox" type="text" placeholder="浏览游戏、周边等等...">
+        <button class="searchicon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 500 500">
+            <path d="M318.798 336.25l17.371-17.372L499.921 482.63 482.548 500zM196.531 393.06a196.53 196.53 0 1 1 196.53-196.53 196.53 196.53 0 0 1-196.53 196.53zm0-372.425a174.912 174.912 0 1 0 174.584 174.913A175.24 175.24 0 0 0 196.53 20.636z" fill="#008aa4"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="userbar">
+        <div class="userbar-list">
+          <a href="login.html" class="login" target="_blank">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 500 500">
+              <path d="M250 0C112.081 0 0 112.081 0 250c0 137.919 112.081 250 250 250 137.919 0 250-112.081 250-250C500 112.081 387.919 0 250 0zm0 25.773c123.99 0 224.227 100.237 224.227 224.227 0 117.445-89.949 213.52-204.817 223.34 1.172-.636 2.372-1.288 2.759-1.771 80.177-110.185 45.526-193.56 45.526-193.56a782.633 782.633 0 0 0 79.716-45.547c25.162-18.256 6.394-94.441-45.546-79.716-51.94 14.726-68.32 102.49-68.32 102.49L238 232.461s-11.528-74.022-45.546-113.865c-34.018-39.843-116.216-.658-68.319 45.546a213.308 213.308 0 0 1 56.943 91.092c-73.326 52.056-49.31 156.108-38.438 191.709C72.972 408.938 25.773 335.069 25.773 250 25.773 126.01 126.01 25.773 250 25.773z" fill="#048ca5"></path>
+            </svg>
+            </span>
+            登录
+          </a>
+          <a href="###" class="shoppingcart">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 500 500">
+                <path d="M202.265 500a42.985 42.985 0 1 1 42.985-42.985A43.152 43.152 0 0 1 202.265 500zm0-69.143a26.158 26.158 0 1 0 26.158 26.158 26.158 26.158 0 0 0-26.158-25.658zM394.532 500a42.985 42.985 0 1 1 42.985-42.985A42.985 42.985 0 0 1 394.532 500zm0-69.143a26.158 26.158 0 1 0 26.158 26.158 26.158 26.158 0 0 0-26.158-25.658zM435.018 279.576h-273.24l-28.656-134.287h340.05l-22.16 122.458zm.833 88.47H188.77a24.492 24.492 0 0 1-24.158-19.16L90.303 10.001a8.497 8.497 0 0 1 6.498-9.83 8.497 8.497 0 0 1 9.996 6.497l74.142 338.884a7.83 7.83 0 0 0 7.83 5.998h247.082a8.33 8.33 0 0 1 8.33 8.497 8.33 8.33 0 0 1-8.33 7.997zm-.833-79.973h-273.24a8.33 8.33 0 0 1-8.33-8.497 8.33 8.33 0 0 1 8.33-8.33h273.24a8.664 8.664 0 0 0 7.83-5.999l35.988-155.946H124.791a8.497 8.497 0 0 1-8.164-9.164 8.33 8.33 0 0 1 8.497-8.33h363.709a8.33 8.33 0 0 1 8.497 8.33v2.666a7.497 7.497 0 0 1 0 1.833l-37.987 164.443a2.333 2.333 0 0 1 0 1 25.658 25.658 0 0 1-24.325 17.994zM95.301 16.833H10.997A8.33 8.33 0 0 1 2.5 8.503 8.497 8.497 0 0 1 10.997.171h84.304a8.33 8.33 0 0 1 8.33 8.497 8.33 8.33 0 0 1-8.33 8.164z" fill="#008aa4"></path>
+              </svg>
+            </span>
+            购物车
+            <span class="cart-quantity">0</span>
+          </a>
+          <div class="minicart">
+            <div class="placeholder"></div>
+            <div class="minicart-header">
+              <div class="minicart-title">
+                <div>你的购物车</div>
+              </div>
+            </div>
+            <div class="minicart-content">
+              <div class="empty-minicart-message">
+                你的购物车是空的
+              </div>
+              <div class="empty-minicart-image">
+                <div class="content-asset">
+                  <img src="./store_img/empty_minicart.png">
+                </div>
+              </div>
+              <div class="empty-minicart-button">
+                <div class="button-wrapper">
+                  <a href="###">立即购物</a>
+                </div>
+              </div>
+            </div>
+          </div>    
+        </div>
+      </div>
+    </div>
+    <!-----------------导航扩展栏-------------------->
+    <div class="navigation-wrapper">
+      <div class="header-menu">
+        <ul class="menu-category">
+          <li>
+            <a href="./store_all_game.html" class="main-nav-item" >游戏</a>
+            <div class="main-submenu unfoldable">
+              <div class="main-submenu-items level-1-wrapper">
+                <div class="category-title">
+                  <span>分类</span>
+                </div>
+                <div class="level-1">
+                  <ul class="tainav-ss-conner">
+                    <li>
+                      <a href="###"class="level-1-item">所有游戏</a>
+                      <div class="level-2-wrapper">
+                        <div class="category-subtitle">
+                          <span>系列游戏</span>
+                        </div>
+                        <div class="level-2">
+                          <div class="nav-ss-container">
+                            <ul class="wrap">
+                              <li>
+                                <a href="###" class="level-2-item">纪元</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">纪元1800</a></li>
+                                        <li><a href="###">纪元2205</a></li>
+                                        <li><a href="###">纪元2070</a></li>
+                                        <li><a href="###">纪元1701</a></li>
+                                        <li><a href="###">纪元1602</a></li>
+                                        <li><a href="###">纪元1503</a></li>
+                                        <li><a href="###">纪元1404</a></li>
+                                        <li><a href="###">纪元合集</a></li>
+                                        <li><a href="###">查看所有(Anno)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">刺客信条</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">刺客信条 合辑</a></li>
+                                        <li><a href="###">刺客信条 奥德赛</a></li>
+                                        <li><a href="###">刺客信条：起源</a></li>
+                                        <li><a href="###">刺客信条：枭雄</a></li>
+                                        <li><a href="###">刺客信条编年史</a></li>
+                                        <li><a href="###">刺客信条：大革命</a></li>
+                                        <li><a href="###">刺客信条：叛变</a></li>
+                                        <li><a href="###">刺客信条：黑旗</a></li>
+                                        <li><a href="###">刺客信条：高清重置版</a></li>
+                                        <li><a href="###">刺客信条：启示录</a></li>
+                                        <li><a href="###">刺客信条：兄弟会</a></li>
+                                        <li><a href="###">刺客信条2</a></li>
+                                        <li><a href="###">刺客信条</a></li>
+                                        <li><a href="###">查看所有(Assassin's Creed)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">孤岛惊魂</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">荣耀战魂</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">荣耀战魂</a></li>
+                                        <li><a href="###">查看所有(For Honor)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">幽灵行动</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">幽灵行动：断点</a></li>
+                                        <li><a href="###">幽灵行动：荒野</a></li>
+                                        <li><a href="###">幽灵行动：未来战士</a></li>
+                                        <li><a href="###">幽灵行动</a></li>
+                                        <li><a href="###">查看所有(幽灵行动)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item" class="level-2-item">彩虹六号</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">彩虹六号：围攻</a></li>
+                                        <li><a href="###">彩虹六号：维加斯2</a></li>
+                                        <li><a href="###">彩虹六号：维加斯</a></li>
+                                        <li><a href="###">彩虹六号：禁忌法则</a></li>
+                                        <li><a href="###">彩虹六号3</a></li>
+                                        <li><a href="###">彩虹六号</a></li>
+                                        <li><a href="###">查看所有(Rainbow Six)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">极限巅峰</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">极限巅峰</a></li>
+                                        <li><a href="###">查看所有(Steep)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">飙酷车神</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">飙酷车神2</a></li>
+                                        <li><a href="###">飙酷车神</a></li>
+                                        <li><a href="###">查看所有(The Crew)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">全境封锁</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">全境封锁2</a></li>
+                                        <li><a href="###">全境封锁</a></li>
+                                        <li><a href="###">查看所有(The Division)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">特技摩托</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">特技摩托：崛起</a></li>
+                                        <li><a href="###">特技摩托：聚变</a></li>
+                                        <li><a href="###">查看所有(特技摩托)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">看门狗</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">看门狗2</a></li>
+                                        <li><a href="###">看门狗</a></li>
+                                        <li><a href="###">查看所有(Watch Dogs)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li><a href="###" class="level-2-item">查看所有(系列游戏)</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li><a href="###">即将发售</a></li>
+                    <li><a href="###">最新游戏</a></li>
+                    <li><a href="###">免费游戏</a></li>
+                    <li><a href="###">pc下载</a></li>
+                    <li><a href="###">查看所有(games)</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="###" class="main-nav-item">额外内容</a>
+            <div class="main-submenu unfoldable">
+              <div class="main-submenu-items level-1-wrapper">
+                <div class="category-title">
+                  <span>分类</span>
+                </div>
+                <div class="level-1">
+                  <ul class="tainav-ss-conner">
+                    <li>
+                      <a href="###"class="level-1-item">所有点数</a>
+                      <div class="level-2-wrapper">
+                        <div class="category-subtitle">
+                          <span>系列游戏</span>
+                        </div>
+                        <div class="level-2">
+                          <div class="nav-ss-container">
+                            <ul class="wrap">
+                              <li>
+                                <a href="###" class="level-2-item">刺客信条</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">孤岛惊魂</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">荣耀战魂</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">幽灵行动</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">飙酷车神</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">特技摩托</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">查看所有(系列游戏)</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="###"class="level-1-item">所有额外内容</a>
+                      <div class="level-2-wrapper">
+                        <div class="category-subtitle">
+                          <span>系列游戏</span>
+                        </div>
+                        <div class="level-2">
+                          <div class="nav-ss-container">
+                            <ul class="wrap">
+                              <li>
+                                <a href="###" class="level-2-item">纪元</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">刺客信条</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">孤岛惊魂</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">荣耀战魂</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">彩虹六号</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">细胞分裂</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">极限巅峰</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">飙酷车神</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">全境封锁</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">特技摩托</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">查看所有(系列游戏)</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li><a href="###">查看所有(DLC)</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="###" class="main-nav-item" style="color:#ff8300">特卖</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>

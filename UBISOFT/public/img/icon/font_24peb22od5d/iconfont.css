@@ -1,0 +1,37 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1561696999378'); /* IE9 */
+  src: url('iconfont.eot?t=1561696999378#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAQMAAsAAAAACYQAAAO/AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDSAqFcIRBATYCJAMYCw4ABCAFhG0HXRv8B1GUDkqe7OeA2w6POU2NV2hT1xmoQom/P+8q87zMq8xJ8fC13+u5u/s2CC5RgDIegITEVlehrWLna3QtBcdX/gO9vDxUwBukWURSEnP/C3AC56zqdAf4PJ5+PncRXvhHrZNBSK4zKKjgH+6XelmA+ezbkZxhVtKni9xsPKCBdmAkyY2LB6B7TCeuCnQR+eXdBDqNU4Ssb05XaCnwoEC8fhoFrYpdGWgN7ULtOLOIL8ja06fEBD4nnx8v1KNF0mR45PHVuoDZPfdbHxFtoTwip6ntvNDPI2MBKMTbTv8b1Sy/gKjT/Qs1u0C3dkm5739Nuj9603zrw3EqagyHbqolZM2yfx5RcX03EPcLDffcEiG4T0LI3B8hNDxoIiQe+pTPyFw33GMQ+AvgP2RM8GeFLLkfeLy8K+jCPFgShv510tv2NbkXDiWRziMdnvkDCUL15b05mpcVFo+wQ+2SJWH2uiF0OJa9ZYUxt48eaJVuinGUjmIjEQ0j2GjpMDrkxNa83kJla7QIMsZIx+MY10hnn1sD6LoWx+KmFNKxoc1RExOH9tkCBrNUDgI7SGN6smb3hUPsqPQA3ffVdjUx76cnV8lWJdOBBi5aalUJxtQuFX9T2DfcGfncj3GwdYqRvF3c+dJEzchk1si1ZIyDnUOM5P0Qk1tLWlPDcgtE6YWtz04X9w3vBy/urWWs7y8H7wzuFs++tHvaIMJngnBfy+Jy19yINJOABxNvUw6CJ2mrtCYBz801IqOyuOxNP4WF4FiKVKpIEwl4AD1BrZMMys5BVgeYWFWRA21ibyPAx0ACQEv1r9qCfFHZBq3VrWwKQP4dz7/O79j+ITvuzWX43+oW8Mtg9S3pa6lB/gjev8FkxY+imDhUPBU6anHQ5YBAtVGqktBJS/we4UG3WxlHJmcJ7RWFDkmbMcjaTWALcQEaXRaharcEnebZnN9lSJyqKB2Yk88g9JuEpNdPyPqxsIV4A41R71D1RxU6XQbfFbtMxbNjwaSECvT7Y2gevBYu6aStZzLJKi6rEu6duHymUE1ZtV7akife4pj4j5kkiMYgDg6t2f3I2oAxHF6UyyBEJE5VVIK63mjgHxx0rGFEEaSA/PyhULnA09HWotNY/xkxEkvhAVRX9I6w0nPnSI0y1QnYrd5PQr3KQ+J9GBMJhIaCsMBB1sxLLOUDFNO92wvJiYGQBdloSoWPC5qqHxxvdHd5G3TCF6yRIkeJJmq0abtLpTz1vxH0tELc9GVW3lDL19p+/STb9UsiwRsOKQIAAA==') format('woff2'),
+  url('iconfont.woff?t=1561696999378') format('woff'),
+  url('iconfont.ttf?t=1561696999378') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1561696999378#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-justify:before {
+  content: "\e610";
+}
+
+.icon-filter:before {
+  content: "\e734";
+}
+
+.icon-arrange:before {
+  content: "\e676";
+}
+
+.icon-all-fill:before {
+  content: "\e7a4";
+}
+
+.icon-buttongroup:before {
+  content: "\e6d3";
+}
+

@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/store.css">
+  <script language=javascript src='js/jquery-1.11.3.js'></script>
+  <title></title>
+</head>
+<body>
+  <!------------------商城顶部导航----------------->
+  <header id="header">
+    <div class="grid-x">
+      <div class="logo">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150">
+            <path d="M104.033 82.966c-8.482 19.127-25.965 29.167-44.573 28.908-35.745-1.731-46.131-42.843-22.243-57.643l1.038 1.039c-.433.52-1.817 1.644-4.068 5.972-2.596 5.28-3.375 10.559-3.116 13.848 1.905 28.734 42.237 34.533 56.172 6.145C104.985 42.287 57.989 2.82 16.358 33.026l-.952-.952C26.398 15.024 47.776 7.321 68.2 12.428c31.332 7.79 48.122 40.245 35.832 70.538m-33.408-.606c-2.856 4.154-7.703 6.838-13.156 6.838-8.828 0-16.012-7.098-16.012-15.926 0-8.395 6.578-15.32 14.887-15.925 5.193-.173 10.04 2.597 12.29 7.097 2.51 4.847 1.558 10.819-2.25 14.887 1.298.952 2.77 1.99 4.24 3.03M14.628 71.8c-.779 6.318-.26 8.309-.26 9.088l-1.384.519c-.52-1.039-1.905-4.674-2.51-9.607C8.915 53.02 21.81 36.056 41.458 32.853c18.002-2.596 35.225 8.482 39.293 24.061l-1.385.52c-.432-.433-1.211-1.731-3.894-4.501-21.81-21.724-55.912-11.77-60.845 18.868m102.995-10.473C116.323-.902 33.235-24.01 1.212 34.238c1.384 1.039 3.375 2.424 4.76 3.376a62.228 62.228 0 0 0-5.02 15.492A59.657 59.657 0 0 0 0 63.58C0 95.862 26.311 122 58.768 122c32.456 0 58.767-26.138 58.767-58.421.173-.693.173-1.472.087-2.25M358.74 60.763c0 24.9-17.897 43.834-43.056 43.834-25.764 0-43.056-18.502-43.056-40.895 0-14.525 5.706-25.073 14.006-31.99l-2.94-2.939c6.399-6.657 18.157-11.845 31.99-11.845 25.16 0 43.056 19.108 43.056 43.835zm-18.675 0c0-15.217-9.683-26.37-24.467-26.37-8.56 0-15.044 3.285-18.848 7.522l2.94 2.94c-4.496 3.717-8.473 8.991-8.473 18.242 0 12.796 9.078 24.122 24.467 24.122 14.698-.087 24.381-11.24 24.381-26.456zM412.776 103.127l-15.821-33.2h-9.338v33.2h-18.415V18.398h31.816c16.86 0 27.84 10.807 27.84 25.765 0 10.548-5.36 19.02-14.439 23.084l18.07 35.794h-19.713zm-25.159-48.244h13.315c6.138 0 10.029-3.977 10.029-10.202 0-6.224-3.89-10.202-10.03-10.202h-13.314zM266.922 35.776h-23.69v67.264h-18.415V35.776h-23.862V18.398h65.967zM170.608 52.636c14.525 5.1 22.047 11.585 22.047 24.727 0 17.55-13.401 27.234-29.31 27.234-14.61 0-25.937-6.571-30.606-18.675l14.612-10.894c2.68 7.608 9.597 12.364 16.427 12.364 6.052 0 10.375-3.286 10.375-8.733 0-5.1-3.286-8.213-15.39-12.622-13.055-4.756-22.738-11.24-22.738-25.333 0-13.573 11.24-23.862 27.58-23.862 12.969 0 22.998 5.187 27.753 15.476L176.746 42.52c-2.766-6.311-7.176-9.77-13.833-9.77-5.533 0-9.683 3.026-9.683 7.35.086 5.014 4.669 8.04 17.378 12.536zM460.933 35.776v17.897h34.756V67.68h-34.756v17.897h39.598v17.465h-58.013V18.31h56.976v17.465z"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="searchbar">
+        <input class="searchbox" type="text" placeholder="浏览游戏、周边等等...">
+        <button class="searchicon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 500 500">
+            <path d="M318.798 336.25l17.371-17.372L499.921 482.63 482.548 500zM196.531 393.06a196.53 196.53 0 1 1 196.53-196.53 196.53 196.53 0 0 1-196.53 196.53zm0-372.425a174.912 174.912 0 1 0 174.584 174.913A175.24 175.24 0 0 0 196.53 20.636z" fill="#008aa4"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="userbar">
+        <div class="userbar-list">
+          <a href="login.html" class="login" target="_blank">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 500 500">
+              <path d="M250 0C112.081 0 0 112.081 0 250c0 137.919 112.081 250 250 250 137.919 0 250-112.081 250-250C500 112.081 387.919 0 250 0zm0 25.773c123.99 0 224.227 100.237 224.227 224.227 0 117.445-89.949 213.52-204.817 223.34 1.172-.636 2.372-1.288 2.759-1.771 80.177-110.185 45.526-193.56 45.526-193.56a782.633 782.633 0 0 0 79.716-45.547c25.162-18.256 6.394-94.441-45.546-79.716-51.94 14.726-68.32 102.49-68.32 102.49L238 232.461s-11.528-74.022-45.546-113.865c-34.018-39.843-116.216-.658-68.319 45.546a213.308 213.308 0 0 1 56.943 91.092c-73.326 52.056-49.31 156.108-38.438 191.709C72.972 408.938 25.773 335.069 25.773 250 25.773 126.01 126.01 25.773 250 25.773z" fill="#048ca5"></path>
+            </svg>
+            </span>
+            登录
+          </a>
+          <a href="###" class="shoppingcart">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 500 500">
+                <path d="M202.265 500a42.985 42.985 0 1 1 42.985-42.985A43.152 43.152 0 0 1 202.265 500zm0-69.143a26.158 26.158 0 1 0 26.158 26.158 26.158 26.158 0 0 0-26.158-25.658zM394.532 500a42.985 42.985 0 1 1 42.985-42.985A42.985 42.985 0 0 1 394.532 500zm0-69.143a26.158 26.158 0 1 0 26.158 26.158 26.158 26.158 0 0 0-26.158-25.658zM435.018 279.576h-273.24l-28.656-134.287h340.05l-22.16 122.458zm.833 88.47H188.77a24.492 24.492 0 0 1-24.158-19.16L90.303 10.001a8.497 8.497 0 0 1 6.498-9.83 8.497 8.497 0 0 1 9.996 6.497l74.142 338.884a7.83 7.83 0 0 0 7.83 5.998h247.082a8.33 8.33 0 0 1 8.33 8.497 8.33 8.33 0 0 1-8.33 7.997zm-.833-79.973h-273.24a8.33 8.33 0 0 1-8.33-8.497 8.33 8.33 0 0 1 8.33-8.33h273.24a8.664 8.664 0 0 0 7.83-5.999l35.988-155.946H124.791a8.497 8.497 0 0 1-8.164-9.164 8.33 8.33 0 0 1 8.497-8.33h363.709a8.33 8.33 0 0 1 8.497 8.33v2.666a7.497 7.497 0 0 1 0 1.833l-37.987 164.443a2.333 2.333 0 0 1 0 1 25.658 25.658 0 0 1-24.325 17.994zM95.301 16.833H10.997A8.33 8.33 0 0 1 2.5 8.503 8.497 8.497 0 0 1 10.997.171h84.304a8.33 8.33 0 0 1 8.33 8.497 8.33 8.33 0 0 1-8.33 8.164z" fill="#008aa4"></path>
+              </svg>
+            </span>
+            购物车
+            <span class="cart-quantity">0</span>
+          </a>
+          <div class="minicart">
+            <div class="placeholder"></div>
+            <div class="minicart-header">
+              <div class="minicart-title">
+                <div>你的购物车</div>
+              </div>
+            </div>
+            <div class="minicart-content">
+              <div class="empty-minicart-message">
+                你的购物车是空的
+              </div>
+              <div class="empty-minicart-image">
+                <div class="content-asset">
+                  <img src="./store_img/empty_minicart.png">
+                </div>
+              </div>
+              <div class="empty-minicart-button">
+                <div class="button-wrapper">
+                  <a href="###">立即购物</a>
+                </div>
+              </div>
+            </div>
+          </div>    
+        </div>
+      </div>
+    </div>
+    <!-----------------导航扩展栏-------------------->
+    <div class="navigation-wrapper">
+      <div class="header-menu">
+        <ul class="menu-category">
+          <li>
+            <a href="./store_all_game.html" class="main-nav-item" >游戏</a>
+            <div class="main-submenu unfoldable">
+              <div class="main-submenu-items level-1-wrapper">
+                <div class="category-title">
+                  <span>分类</span>
+                </div>
+                <div class="level-1">
+                  <ul class="tainav-ss-conner">
+                    <li>
+                      <a href="###"class="level-1-item">所有游戏</a>
+                      <div class="level-2-wrapper">
+                        <div class="category-subtitle">
+                          <span>系列游戏</span>
+                        </div>
+                        <div class="level-2">
+                          <div class="nav-ss-container">
+                            <ul class="wrap">
+                              <li>
+                                <a href="###" class="level-2-item">纪元</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">纪元1800</a></li>
+                                        <li><a href="###">纪元2205</a></li>
+                                        <li><a href="###">纪元2070</a></li>
+                                        <li><a href="###">纪元1701</a></li>
+                                        <li><a href="###">纪元1602</a></li>
+                                        <li><a href="###">纪元1503</a></li>
+                                        <li><a href="###">纪元1404</a></li>
+                                        <li><a href="###">纪元合集</a></li>
+                                        <li><a href="###">查看所有(Anno)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">刺客信条</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">刺客信条 合辑</a></li>
+                                        <li><a href="###">刺客信条 奥德赛</a></li>
+                                        <li><a href="###">刺客信条：起源</a></li>
+                                        <li><a href="###">刺客信条：枭雄</a></li>
+                                        <li><a href="###">刺客信条编年史</a></li>
+                                        <li><a href="###">刺客信条：大革命</a></li>
+                                        <li><a href="###">刺客信条：叛变</a></li>
+                                        <li><a href="###">刺客信条：黑旗</a></li>
+                                        <li><a href="###">刺客信条：高清重置版</a></li>
+                                        <li><a href="###">刺客信条：启示录</a></li>
+                                        <li><a href="###">刺客信条：兄弟会</a></li>
+                                        <li><a href="###">刺客信条2</a></li>
+                                        <li><a href="###">刺客信条</a></li>
+                                        <li><a href="###">查看所有(Assassin's Creed)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">孤岛惊魂</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">荣耀战魂</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">荣耀战魂</a></li>
+                                        <li><a href="###">查看所有(For Honor)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">幽灵行动</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">幽灵行动：断点</a></li>
+                                        <li><a href="###">幽灵行动：荒野</a></li>
+                                        <li><a href="###">幽灵行动：未来战士</a></li>
+                                        <li><a href="###">幽灵行动</a></li>
+                                        <li><a href="###">查看所有(幽灵行动)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item" class="level-2-item">彩虹六号</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">彩虹六号：围攻</a></li>
+                                        <li><a href="###">彩虹六号：维加斯2</a></li>
+                                        <li><a href="###">彩虹六号：维加斯</a></li>
+                                        <li><a href="###">彩虹六号：禁忌法则</a></li>
+                                        <li><a href="###">彩虹六号3</a></li>
+                                        <li><a href="###">彩虹六号</a></li>
+                                        <li><a href="###">查看所有(Rainbow Six)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">极限巅峰</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">极限巅峰</a></li>
+                                        <li><a href="###">查看所有(Steep)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">飙酷车神</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">飙酷车神2</a></li>
+                                        <li><a href="###">飙酷车神</a></li>
+                                        <li><a href="###">查看所有(The Crew)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">全境封锁</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">全境封锁2</a></li>
+                                        <li><a href="###">全境封锁</a></li>
+                                        <li><a href="###">查看所有(The Division)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">特技摩托</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">特技摩托：崛起</a></li>
+                                        <li><a href="###">特技摩托：聚变</a></li>
+                                        <li><a href="###">查看所有(特技摩托)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">看门狗</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">看门狗2</a></li>
+                                        <li><a href="###">看门狗</a></li>
+                                        <li><a href="###">查看所有(Watch Dogs)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li><a href="###" class="level-2-item">查看所有(系列游戏)</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li><a href="###">即将发售</a></li>
+                    <li><a href="###">最新游戏</a></li>
+                    <li><a href="###">免费游戏</a></li>
+                    <li><a href="###">pc下载</a></li>
+                    <li><a href="###">查看所有(games)</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="###" class="main-nav-item">额外内容</a>
+            <div class="main-submenu unfoldable">
+              <div class="main-submenu-items level-1-wrapper">
+                <div class="category-title">
+                  <span>分类</span>
+                </div>
+                <div class="level-1">
+                  <ul class="tainav-ss-conner">
+                    <li>
+                      <a href="###"class="level-1-item">所有点数</a>
+                      <div class="level-2-wrapper">
+                        <div class="category-subtitle">
+                          <span>系列游戏</span>
+                        </div>
+                        <div class="level-2">
+                          <div class="nav-ss-container">
+                            <ul class="wrap">
+                              <li>
+                                <a href="###" class="level-2-item">刺客信条</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">孤岛惊魂</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">荣耀战魂</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">幽灵行动</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">飙酷车神</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">特技摩托</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">查看所有(系列游戏)</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="###"class="level-1-item">所有额外内容</a>
+                      <div class="level-2-wrapper">
+                        <div class="category-subtitle">
+                          <span>系列游戏</span>
+                        </div>
+                        <div class="level-2">
+                          <div class="nav-ss-container">
+                            <ul class="wrap">
+                              <li>
+                                <a href="###" class="level-2-item">纪元</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">刺客信条</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">孤岛惊魂</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">荣耀战魂</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">彩虹六号</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">细胞分裂</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">极限巅峰</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">飙酷车神</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">全境封锁</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">特技摩托</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="###" class="level-2-item">查看所有(系列游戏)</a>
+                                <div class="level-3-wrapper">
+                                  <div class="category-subtitle">
+                                    <span>游戏名称</span>
+                                  </div>
+                                  <div class="level-3">
+                                    <div class="nav-ss-container">
+                                      <ul>
+                                        <li><a href="###">孤岛惊魂：新曙光</a></li>
+                                        <li><a href="###">孤岛惊魂合集</a></li>
+                                        <li><a href="###">孤岛惊魂5</a></li>
+                                        <li><a href="###">野蛮纪源</a></li>
+                                        <li><a href="###">孤岛惊魂4</a></li>
+                                        <li><a href="###">孤岛惊魂3</a></li>
+                                        <li><a href="###">孤岛惊魂2</a></li>
+                                        <li><a href="###">孤岛惊魂</a></li>
+                                        <li><a href="###">查看所有(For Cry)</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li><a href="###">查看所有(DLC)</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="###" class="main-nav-item" style="color:#ff8300">特卖</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- <script src="js/UB_store_header.js"></script> -->
+
+  
+  <!----------------------商城首页主要内容---------------------->
+  <div id="container">
+    <!----轮播---->
+    <div class="carousel">
+      <!---轮播列表----->
+      <div class="carousel-view">
+        <ul class="carousel-list">
+          <li class="carousel-item item1">
+            <img src="./store_img/carousel_img/HERO_WDL_DESKTOP_Preorder_CN_1920x538.jpg">
+            <div class="brief"></div>
+          </li>
+          <li class="carousel-item item2">
+            <img src="./store_img/carousel_img/TCTD2_FIRST_DISCOUNT_1920x538_x2.jpg">
+            <div class="brief"></div>
+          </li>
+          <li class="carousel-item item3">
+            <img src="./store_img/carousel_img/ULTIMATE_DESKTOP_GRB_Preorder_CN_1920x538.jpg">
+            <div class="brief"></div>
+          </li>
+        </ul>
+      </div>
+      <!----轮播指示器---->
+      <ul class="pointer">
+        <li class="pointer-item">
+          <span class="progress-bar"></span>
+          <p>看门狗：军团</p>
+        </li>
+        <li class="pointer-item">
+          <span class="progress-bar"></span>
+          <p>《全境封锁》独家优惠</p>
+        </li>
+        <li class="pointer-item">
+          <span class="progress-bar"></span>
+          <p>幽灵行动：断点</p>
+        </li>
+      </ul>
+      <div class="controls">
+        <div class="control-left">
+          <div class="left-arrow"></div>
+        </div>
+        <div class="control-right">
+          <div class="right-arrow"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-------新公布的游戏--------->
+    <div id="newGame">
+      <p class="title">查看我们新公布的游戏</p>
+      <div class="newGame-list">
+        <div class="game-item">
+          <div class="clearfix">
+            <div class="push">即将推出</div> 
+          </div>
+          <div class="game-img">
+            <img src="./store_img/content_img/ULT-Title_Name_Uplay_Homepage_Banner_Medium_500x270.jpg">
+            <div class="overlay">
+              <div><a href="###" class="preorder">预购</a></div>
+              <div><a href="###" class="view-more">查看更多</a></div>
+            </div>
+          </div>
+          <div class="product-pricing">
+            <p>《幽灵行动：断点》 终极版</p>
+            <p>终极版</p>
+            <div class="pricing">
+              <div>
+                起<span class="price">¥658.00</span>
+                <s>¥718.00</s>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="game-item">
+          <div class="clearfix">
+            <div class="push">即将推出</div> 
+          </div>
+          <div class="game-img">
+            <img src="./store_img/content_img/WDL_Standard_Triple_CN.jpg">
+            <div class="overlay">
+              <div><a href="###" class="preorder">预购</a></div>
+              <div><a href="###" class="view-more">查看更多</a></div>
+            </div>
+          </div>
+          <div class="product-pricing">
+            <p>Watch Dogs: Legion</p>
+            <p>标准版</p>
+            <div class="pricing">
+              <div>
+                起<span class="price">￥358.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="game-item">
+          <div class="clearfix">
+            <div class="push">即将推出</div> 
+          </div>
+          <div class="game-img">
+            <img src="./store_img/content_img/Gods_Monsters.jpg">
+            <div class="overlay">
+              <div><a href="###" class="preorder">预购</a></div>
+              <div><a href="###" class="view-more">查看更多</a></div>
+            </div>
+          </div>
+          <div class="product-pricing clearfix">
+            <p>Gods & Monsters</p>
+            <p>标准版</p>
+            <div class="pricing">
+              <div>
+                起<span class="price">￥358.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+
+    <!------特卖------->
+    <div id="temai">
+      <div class="temai-item">
+        <img src="./store_img/content_img/DOUBLE_CasualSale_784x480.jpg">
+        <div>
+          <div class="asset">
+            <div>特卖</div>
+            <p>低至2.5折</p>
+            <p>精选休闲轻游</p>
+            <a class="buynow" href="">立即购物</a>
+          </div>
+        </div>
+      </div>
+      <div class="temai-item">
+        <img src="./store_img/content_img/TCTD2_Uplay_Homepage_Banner_Large_784x480.jpg">
+        <div>
+          <div class="asset">
+            <div>特卖</div>
+            <p>低至2.5折</p>
+            <p>精选休闲轻游</p>
+            <a  class="buynow" href="">立即购物</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!---------畅销游戏------------->
+    <div class="changxiao">
+      <p class="title">畅销游戏</p>
+      <div class="changxiao-box">
+        <ul class="changxiao-list">
+          <li class="periphery">
+            <div>
+              <div class="discount"></div>
+              <div class="push"></div>
+            </div>
+            <div class="game-img">
+              <img src="./store_img/changxiao_img/56c494ad88a7e300458b4d5a.jpg">
+              <div class="overlay">
+                <p class="sell-date">发售日期 19-3-14</p>
+                <div><a href="###" class="add-cart">新增到购物车</a></div>
+                <div><a href="###" class="view-more">查看更多</a></div>
+              </div>
+            </div>
+            <div class="product-pricing">
+              <p>全境封锁2</p>
+              <p>标准版</p>
+              <div>起
+                <span class="price">￥206.36</span>
+              </div>
+            </div>
+          </li>
+          <li class="periphery ">
+            <div>
+              <div class="discount"></div>
+              <div class="push"></div>
+            </div>
+            <div class="game-img">
+              <img src="./store_img/changxiao_img/56c494ad88a7e300458b4d5a.jpg">
+              <div class="overlay">
+                <p class="sell-date">发售日期 19-3-14</p>
+                <div><a href="###" class="add-cart">新增到购物车</a></div>
+                <div><a href="###" class="view-more">查看更多</a></div>
+              </div>
+            </div>
+            <div class="product-pricing">
+              <p>全境封锁2</p>
+              <p>标准版</p>
+              <div>起
+                <span class="price">￥206.36</span>
+              </div>
+            </div>
+          </li>
+          <li class="prev2">
+            <div>
+              <div class="discount"></div>
+              <div class="push"></div>
+            </div>
+            <div class="game-img">
+              <img src="./store_img/changxiao_img/56c494ad88a7e300458b4d5a.jpg">
+              <div class="overlay">
+                <p class="sell-date">发售日期 19-3-14</p>
+                <div><a href="###" class="add-cart">新增到购物车</a></div>
+                <div><a href="###" class="view-more">查看更多</a></div>
+              </div>
+            </div>
+            <div class="product-pricing">
+              <p>全境封锁2</p>
+              <p>标准版</p>
+              <div>起
+                <span class="price">￥206.36</span>
+              </div>
+            </div>
+          </li>
+          <li class="prev1">
+            <div>
+              <div class="discount"></div>
+              <div class="push"></div>
+            </div>
+            <div class="game-img">
+              <img src="./store_img/changxiao_img/56c494ad88a7e300458b4d5a.jpg">
+              <div class="overlay">
+                <p class="sell-date">发售日期 19-3-14</p>
+                <div><a href="###" class="add-cart">新增到购物车</a></div>
+                <div><a href="###" class="view-more">查看更多</a></div>
+              </div>
+            </div>
+            <div class="product-pricing">
+              <p>全境封锁2</p>
+              <p>标准版</p>
+              <div>起
+                <span class="price">￥206.36</span>
+              </div>
+            </div>
+          </li>
+          <li class="center">
+            <div>
+              <div class="discount"></div>
+              <div class="push"></div>
+            </div>
+            <div class="game-img">
+              <img src="./store_img/changxiao_img/56c494ad88a7e300458b4d5a.jpg">
+              <div class="overlay">
+                <p class="sell-date">发售日期 19-3-14</p>
+                <div><a href="###" class="add-cart">新增到购物车</a></div>
+                <div><a href="###" class="view-more">查看更多</a></div>
+              </div>
+            </div>
+            <div class="product-pricing">
+              <p>全境封锁2</p>
+              <p>标准版</p>
+              <div>起
+                <span class="price">￥206.36</span>
+              </div>
+            </div>
+          </li>
+          <li class="next1">
+            <div>
+              <div class="discount"></div>
+              <div class="push"></div>
+            </div>
+            <div class="game-img">
+              <img src="./store_img/changxiao_img/56c494ad88a7e300458b4d5a.jpg">
+              <div class="overlay">
+                <p class="sell-date">发售日期 19-3-14</p>
+                <div><a href="###" class="add-cart">新增到购物车</a></div>
+                <div><a href="###" class="view-more">查看更多</a></div>
+              </div>
+            </div>
+            <div class="product-pricing">
+              <p>全境封锁2</p>
+              <p>标准版</p>
+              <div>起
+                <span class="price">￥206.36</span>
+              </div>
+            </div>
+          </li>
+          <li class="next2">
+            <div>
+              <div class="discount"></div>
+              <div class="push"></div>
+            </div>
+            <div class="game-img">
+              <img src="./store_img/changxiao_img/56c494ad88a7e300458b4d5a.jpg">
+              <div class="overlay">
+                <p class="sell-date">发售日期 19-3-14</p>
+                <div><a href="###" class="add-cart">新增到购物车</a></div>
+                <div><a href="###" class="view-more">查看更多</a></div>
+              </div>
+            </div>
+            <div class="product-pricing">
+              <p>全境封锁2</p>
+              <p>标准版</p>
+              <div>起
+                <span class="price">￥206.36</span>
+              </div>
+            </div>
+          </li>
+          <li class="periphery">
+            <div>
+              <div class="discount"></div>
+              <div class="push"></div>
+            </div>
+            <div class="game-img">
+              <img src="./store_img/changxiao_img/56c494ad88a7e300458b4d5a.jpg">
+              <div class="overlay">
+                <p class="sell-date">发售日期 19-3-14</p>
+                <div><a href="###" class="add-cart">新增到购物车</a></div>
+                <div><a href="###" class="view-more">查看更多</a></div>
+              </div>
+            </div>
+            <div class="product-pricing">
+              <p>全境封锁2</p>
+              <p>标准版</p>
+              <div>起
+                <span class="price">￥206.36</span>
+              </div>
+            </div>
+          </li>
+          <li class="periphery">
+            <div>
+              <div class="discount"></div>
+              <div class="push"></div>
+            </div>
+            <div class="game-img">
+              <img src="./store_img/changxiao_img/56c494ad88a7e300458b4d5a.jpg">
+              <div class="overlay">
+                <p class="sell-date">发售日期 19-3-14</p>
+                <div><a href="###" class="add-cart">新增到购物车</a></div>
+                <div><a href="###" class="view-more">查看更多</a></div>
+              </div>
+            </div>
+            <div class="product-pricing">
+              <p>全境封锁2</p>
+              <p>标准版</p>
+              <div>起
+                <span class="price">￥206.36</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="controls">
+          <div class="control-left">
+            <div class="left-arrow"></div>
+          </div>
+          <div class="control-right">
+            <div class="right-arrow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!----------------商城底部咨询----------------->
+  <footer>
+    <div class="footer-icon-bar">
+      <ul class="footer-icon-list">
+        <li class="footer-icon-item">
+          <a href="###">
+            <img src="./store_img/footer_img/下载.svg">
+            <p>
+              用 U100 CLUB
+              <br>
+              点数可享 8 折优惠
+            </p>
+          </a>
+        </li>
+        <li class="footer-icon-item">
+          <a href="###">
+            <img src="./store_img/footer_img/下载 (1).svg">
+            <p>预购好礼</p>
+          </a>
+        </li>
+        <li class="footer-icon-item">
+          <a href="###">
+            <img src="./store_img/footer_img/下载 (2).svg">
+            <p>超棒客服</p>
+          </a>
+        </li>
+        <li class="footer-icon-item">
+          <img src="./store_img/footer_img/下载 (3).svg">
+          <ul style="display:flex;">
+            <li style="border: 0.5px solid #e0dede;width: 50px;border-radius: 10px;height: 30px;margin-right: 5px;">
+              <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 131.39 86.9" width="30px"><defs><style>.a{opacity:0;}.b{fill:#fff;}.c{fill:#ff5f00;}.d{fill:#eb001b;}.e{fill:#f79e1b;}</style></defs><title>Asset 1</title><g class="a"><rect class="b" width="131.39" height="86.9"></rect></g><rect class="c" x="48.37" y="15.14" width="34.66" height="56.61"></rect><path class="d" d="M51.94,43.45a35.94,35.94,0,0,1,13.75-28.3,36,36,0,1,0,0,56.61A35.94,35.94,0,0,1,51.94,43.45Z"></path><path class="e" d="M120.5,65.76V64.6H121v-.24h-1.19v.24h.47v1.16Zm2.31,0v-1.4h-.36l-.42,1-.42-1h-.36v1.4h.26V64.7l.39.91h.27l.39-.91v1.06Z"></path><path class="e" d="M123.94,43.45a36,36,0,0,1-58.25,28.3,36,36,0,0,0,0-56.61,36,36,0,0,1,58.25,28.3Z"></path></svg>
+            </li>
+            <li style="
+              border: 0.5px solid #e0dede;
+              width: 50px;
+              border-radius: 10px;
+              height: 30px;
+              margin-right: 5px;
+            ">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink" height="20px" version="1.1" viewBox="50 0 150 80" width="70px" style="
+                  margin-top: 2px;
+              ">
+            <title></title>
+            <defs></defs>
+            <g fill="none" fill-rule="ev enodd" id="Page-1" stroke="none" stroke-width="1"><g id="american-express" transform="translate(-1.000000, 0.000000)">
+              <path d="M14.5198284,36.625336 L11.4210462,29.0743396 L8.33997461,36.625336 L14.5198284,36.625336 Z M82.7855885,33.6185346 C82.1634325,33.9961701 81.427586,34.0087389 80.5460556,34.0087389 L75.04606,34.0087389 L75.04606,29.8016165 L80.6208972,29.8016165 C81.4098754,29.8016165 82.2331323,29.8370377 82.7678779,30.1432595 C83.3551839,30.419202 83.7185367,31.006508 83.7185367,31.8177674 C83.7185367,32.6455947 83.3728945,33.3117414 82.7855885,33.6185346 C82.7855885,33.6185346 83.3728945,33.3117414 82.7855885,33.6185346 L82.7855885,33.6185346 L82.7855885,33.6185346 Z M122.021975,36.625336 L118.888915,29.0743396 L115.772993,36.625336 L122.021975,36.625336 L122.021975,36.625336 L122.021975,36.625336 L122.021975,36.625336 Z M48.8829461,44.7984882 L44.2416286,44.7984882 L44.2244893,29.9638684 L37.659573,44.7984882 L33.6844022,44.7984882 L27.1023466,29.9507282 L27.1023466,44.7984882 L17.8939817,44.7984882 L16.1543446,40.5736552 L6.72773948,40.5736552 L4.97039177,44.7984882 L0.0531317741,44.7984882 L8.16058346,25.8572964 L14.8871803,25.8572964 L22.5872884,43.7906984 L22.5872884,25.8572964 L29.9766042,25.8572964 L35.9016539,38.7066161 L41.3445186,25.8572964 L48.8823748,25.8572964 L48.8823748,44.7984882 L48.8823748,44.7984882 L48.8829461,44.7984882 L48.8829461,44.7984882 Z M67.3813731,44.7984882 L52.2570994,44.7984882 L52.2570994,25.8572964 L67.3813731,25.8572964 L67.3813731,29.8016165 L56.7847264,29.8016165 L56.7847264,33.2157615 L67.1271405,33.2157615 L67.1271405,37.0983801 L56.7847264,37.0983801 L56.7847264,40.8810197 L67.3813731,40.8810197 L67.3813731,44.7984882 L67.3813731,44.7984882 L67.3813731,44.7984882 L67.3813731,44.7984882 Z M88.7060678,30.958518 C88.7060678,33.9784595 86.6904882,35.5387055 85.5158761,36.0071792 C86.5065266,36.3842434 87.3526358,37.0503901 87.7554089,37.602275 C88.3947041,38.5443642 88.5049669,39.385903 88.5049669,41.0775501 L88.5049669,44.7984882 L83.9384908,44.7984882 L83.9213516,42.4098436 C83.9213516,41.2700814 84.0304716,39.6309947 83.2066435,38.7197562 C82.5450672,38.0536095 81.5367061,37.9090682 79.9067604,37.9090682 L75.0466313,37.9090682 L75.0466313,44.7984882 L70.5195757,44.7984882 L70.5195757,25.8572964 L80.9328321,25.8572964 C83.2466352,25.8572964 84.9514224,25.9184265 86.4151171,26.7645357 C87.8473897,27.6106449 88.7060678,28.8458159 88.7060678,30.958518 C88.7060678,30.958518 88.7060678,28.8458159 88.7060678,30.958518 L88.7060678,30.958518 L88.7060678,30.958518 Z M95.9514136,44.7984882 L91.3318058,44.7984882 L91.3318058,25.8572964 L95.9514136,25.8572964 L95.9514136,44.7984882 L95.9514136,44.7984882 L95.9514136,44.7984882 L95.9514136,44.7984882 Z M149.544806,44.7984882 L143.129001,44.7984882 L134.547363,30.5820251 L134.547363,44.7984882 L125.327,44.7984882 L123.565082,40.5736552 L114.160187,40.5736552 L112.450829,44.7984882 L107.153077,44.7984882 C104.952393,44.7984882 102.166117,44.3117326 100.588161,42.7034967 C98.997064,41.0952607 98.1692367,38.916858 98.1692367,35.4724336 C98.1692367,32.6633053 98.6639906,30.0952695 100.60987,28.0659785 C102.073565,26.5542939 104.365658,25.8572964 107.485579,25.8572964 L111.868665,25.8572964 L111.868665,29.9158784 L107.57756,29.9158784 C105.925333,29.9158784 104.992385,30.1615414 104.093715,31.03793 C103.321876,31.835478 102.792272,33.3431635 102.792272,35.3284636 C102.792272,37.3577546 103.195617,38.820878 104.037155,39.7766786 C104.734153,40.5262365 106.000746,40.7536177 107.192497,40.7536177 L109.225787,40.7536177 L115.606742,25.8578677 L122.39047,25.8578677 L130.055728,43.7735592 L130.055728,25.8578677 L136.949147,25.8578677 L144.907487,39.0494017 L144.907487,25.8578677 L149.544806,25.8578677 L149.544806,44.7984882 L149.544806,44.7984882 L149.544806,44.7984882 L149.544806,44.7984882 Z M0.000571309399,48.518855 L7.73610057,48.518855 L9.48030817,44.3117326 L13.3852079,44.3117326 L15.124845,48.518855 L30.3450987,48.518855 L30.3450987,45.3023831 L31.7036725,48.5325664 L39.6048815,48.5325664 L40.9634552,45.2543931 L40.9634552,48.518855 L78.7887079,48.518855 L78.7709973,41.612867 L79.5028447,41.612867 C80.0153092,41.6305776 80.1649923,41.6779963 80.1649923,42.5241055 L80.1649923,48.518855 L99.72834,48.518855 L99.72834,46.9111904 C101.306297,47.7567283 103.760642,48.518855 106.990254,48.518855 L115.220537,48.518855 L116.981884,44.3117326 L120.886784,44.3117326 L122.609281,48.518855 L138.469402,48.518855 L138.469402,44.5225458 L140.871186,48.518855 L153.580535,48.518855 L153.580535,22.1015084 L141.002588,22.1015084 L141.002588,25.221429 L139.241241,22.1015084 L126.33479,22.1015084 L126.33479,25.221429 L124.717413,22.1015084 L107.283907,22.1015084 C104.365658,22.1015084 101.800479,22.508852 99.72834,23.6440438 L99.72834,22.1015084 L87.6977067,22.1015084 L87.6977067,23.6440438 C86.3791246,22.4740021 84.5823565,22.1015084 82.5844876,22.1015084 L38.6319416,22.1015084 L35.6828424,28.9246566 L32.6543313,22.1015084 L18.810362,22.1015084 L18.810362,25.221429 L17.2895363,22.1015084 L5.4828563,22.1015084 L0,34.6617456 L0,48.518855 L0.000571309399,48.518855 Z M161.039551,62.4668027 L152.788129,62.4668027 C151.964301,62.4668027 151.416987,62.4976534 150.95594,62.809017 C150.478325,63.1158102 150.294364,63.5711438 150.294364,64.1721612 C150.294364,64.8868693 150.697708,65.3730536 151.284443,65.5832955 C151.762057,65.7495465 152.275093,65.7981078 153.029222,65.7981078 L155.482996,65.8638084 C157.959051,65.9249385 159.611849,66.350564 160.619638,67.3886332 C160.803029,67.5331744 160.913291,67.6954263 161.039551,67.8576782 L161.039551,62.4668027 Z M161.039551,74.9573401 C159.93978,76.565576 157.796799,77.3808346 154.89569,77.3808346 L146.15237,77.3808346 L146.15237,73.3182534 L154.860268,73.3182534 C155.724088,73.3182534 156.328533,73.2045628 156.692458,72.8492084 C157.00782,72.5561267 157.227774,72.1305012 157.227774,71.6134662 C157.227774,71.0615813 157.00782,70.623387 156.674747,70.3605847 C156.346244,70.0715021 155.868058,69.9401009 155.079651,69.9401009 C150.828538,69.7955597 145.525073,70.0715021 145.525073,64.0761813 C145.525073,61.3281831 147.269852,58.4356436 152.020861,58.4356436 L161.038979,58.4356436 L161.038979,54.6661442 L152.660156,54.6661442 C150.13154,54.6661442 148.294781,55.2717321 146.993909,56.21325 L146.993909,54.6661442 L134.600494,54.6661442 C132.618622,54.6661442 130.29225,55.1574702 129.191908,56.21325 L129.191908,54.6661442 L107.060525,54.6661442 L107.060525,56.21325 C105.299178,54.9426579 102.327226,54.6661442 100.955513,54.6661442 L86.3574148,54.6661442 L86.3574148,56.21325 C84.9639912,54.8638172 81.865209,54.6661442 79.9764602,54.6661442 L63.6387253,54.6661442 L59.9000766,58.7121573 L56.3985213,54.6661442 L31.9933263,54.6661442 L31.9933263,81.1017727 L55.9391885,81.1017727 L59.7915278,76.9917729 L63.4204851,81.1017727 L78.1808347,81.1149128 L78.1808347,74.89621 L79.6319606,74.89621 C81.5904092,74.9264894 83.9002131,74.8476487 85.9380737,73.9666896 L85.9380737,81.1012014 L98.112677,81.1012014 L98.112677,74.21121 L98.6999831,74.21121 C99.449541,74.21121 99.5232399,74.2420607 99.5232399,74.9910473 L99.5232399,81.1006301 L136.507525,81.1006301 C138.855607,81.1006301 141.309952,80.4996126 142.669097,79.4089829 L142.669097,81.1006301 L154.400364,81.1006301 C156.841569,81.1006301 159.225643,80.7584157 161.039551,79.8820271 L161.039551,74.9573401 L161.039551,74.9573401 L161.039551,74.9573401 L161.039551,74.9573401 Z M142.979889,67.3886332 C143.86142,68.3010143 144.333893,69.452774 144.333893,71.402653 C144.333893,75.4783743 141.787567,77.3808346 137.221662,77.3808346 L128.403501,77.3808346 L128.403501,73.3182534 L137.186241,73.3182534 C138.044919,73.3182534 138.653935,73.2045628 139.035569,72.8492084 C139.346933,72.5561267 139.570315,72.1305012 139.570315,71.6134662 C139.570315,71.0615813 139.328651,70.623387 139.017859,70.3605847 C138.671645,70.0715021 138.194031,69.9401009 137.405624,69.9401009 C133.17165,69.7955597 127.869327,70.0715021 127.869327,64.0761813 C127.869327,61.3281831 129.595824,58.4356436 134.342263,58.4356436 L143.418655,58.4356436 L143.418655,62.4679453 L135.11353,62.4679453 C134.290273,62.4679453 133.754957,62.498796 133.299623,62.8101596 C132.803726,63.1169528 132.619765,63.5722864 132.619765,64.1733039 C132.619765,64.8880119 133.04082,65.3741962 133.610415,65.5844381 C134.08803,65.7506891 134.601066,65.7992504 135.372333,65.7992504 L137.809539,65.864951 C140.267312,65.9249385 141.954389,66.3499927 142.979889,67.3886332 C142.979889,67.3886332 141.954389,66.3499927 142.979889,67.3886332 L142.979889,67.3886332 L142.979889,67.3886332 Z M102.126697,66.2185915 C101.521109,66.5779451 100.772122,66.6087958 99.8911632,66.6087958 L94.3911676,66.6087958 L94.3911676,62.3536834 L99.9660047,62.3536834 C100.772122,62.3536834 101.578811,62.3708227 102.126697,62.6958978 C102.713432,63.0026909 103.064216,63.5894257 103.064216,64.4001137 C103.064216,65.2108017 102.713432,65.8638084 102.126697,66.2185915 C102.126697,66.2185915 102.713432,65.8638084 102.126697,66.2185915 L102.126697,66.2185915 L102.126697,66.2185915 Z M104.860984,68.5763854 C105.868773,68.9483078 106.692602,69.6150259 107.078807,70.1669108 C107.718102,71.0918607 107.810654,71.9551092 107.828936,73.6250466 L107.828936,77.3808346 L103.283598,77.3808346 L103.283598,75.0104719 C103.283598,73.8707096 103.39329,72.1830616 102.551751,71.3021025 C101.890175,70.623387 100.881814,70.4611351 99.2301582,70.4611351 L94.3917389,70.4611351 L94.3917389,77.3808346 L89.8424022,77.3808346 L89.8424022,58.4350723 L100.295079,58.4350723 C102.587172,58.4350723 104.256538,58.536194 105.742514,59.3291715 C107.171359,60.19242 108.070029,61.3750304 108.070029,63.5362939 C108.069457,66.5602345 106.052735,68.1033412 104.860984,68.5763854 C104.860984,68.5763854 106.052735,68.1033412 104.860984,68.5763854 L104.860984,68.5763854 L104.860984,68.5763854 Z M110.580362,58.4350723 L125.690924,58.4350723 L125.690924,62.3531121 L115.089136,62.3531121 L115.089136,65.7975365 L125.432121,65.7975365 L125.432121,69.6630159 L115.089136,69.6630159 L115.089136,73.4325153 L125.690924,73.4496546 L125.690924,77.3808346 L110.580362,77.3808346 L110.580362,58.4350723 L110.580362,58.4350723 L110.580362,58.4350723 L110.580362,58.4350723 Z M80.0341624,67.1783913 L74.1833828,67.1783913 L74.1833828,62.3536834 L80.0867229,62.3536834 C81.7212391,62.3536834 82.8558595,63.0198302 82.8558595,64.6766274 C82.8558595,66.3151428 81.7737995,67.1783913 80.0341624,67.1783913 L80.0341624,67.1783913 L80.0341624,67.1783913 L80.0341624,67.1783913 Z M69.6740378,75.6577654 L62.7229163,67.940518 L69.6740378,60.4683624 L69.6740378,75.6577654 L69.6740378,75.6577654 L69.6740378,75.6577654 L69.6740378,75.6577654 Z M51.7229251,73.4325153 L40.5915328,73.4325153 L40.5915328,69.6630159 L50.5311737,69.6630159 L50.5311737,65.7975365 L40.5915328,65.7975365 L40.5915328,62.3531121 L51.9423079,62.3531121 L56.8944178,67.8742462 L51.7229251,73.4325153 L51.7229251,73.4325153 L51.7229251,73.4325153 L51.7229251,73.4325153 Z M87.7165599,64.6766274 C87.7165599,69.9395296 83.7899504,71.0261601 79.8324902,71.0261601 L74.1833828,71.0261601 L74.1833828,77.3808346 L65.3835042,77.3808346 L59.8086671,71.109 L54.0150184,77.3808346 L36.0816164,77.3808346 L36.0816164,58.4350723 L54.2909609,58.4350723 L59.8612275,64.6452054 L65.6200263,58.4350723 L80.0867229,58.4350723 C83.6796877,58.4350723 87.7165599,59.4297219 87.7165599,64.6766274 C87.7165599,64.6766274 87.7165599,59.4297219 87.7165599,64.6766274 L87.7165599,64.6766274 L87.7165599,64.6766274 Z M87.7165599,64.6766274" fill="#016fd0" id="Shape" xmlns="http://www.w3.org/2000/svg"></path>
+              </g>
+              </g>
+              </svg>
+            </li>
+            <li style="
+                border: 0.5px solid #e0dede;
+                width: 50px;
+                border-radius: 10px;
+                height: 30px;
+                margin-right: 5px;
+            ">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="30px" width="30px" id="Capa_1" x="0px" y="0px" viewBox="0 0 504 504" style="enable-background:new 0 0 504 504;" xml:space="preserve">
+                <polygon style="fill:#3C58BF;" points="184.8,324.4 210.4,180.4 250.4,180.4 225.6,324.4 "></polygon>
+                <polygon style="fill:#293688;" points="184.8,324.4 217.6,180.4 250.4,180.4 225.6,324.4 "></polygon>
+                <path style="fill:#3C58BF;" d="M370.4,182c-8-3.2-20.8-6.4-36.8-6.4c-40,0-68.8,20-68.8,48.8c0,21.6,20,32.8,36,40  s20.8,12,20.8,18.4c0,9.6-12.8,14.4-24,14.4c-16,0-24.8-2.4-38.4-8l-5.6-2.4l-5.6,32.8c9.6,4,27.2,8,45.6,8  c42.4,0,70.4-20,70.4-50.4c0-16.8-10.4-29.6-34.4-40c-14.4-7.2-23.2-11.2-23.2-18.4c0-6.4,7.2-12.8,23.2-12.8  c13.6,0,23.2,2.4,30.4,5.6l4,1.6L370.4,182L370.4,182z"></path>
+                <path style="fill:#293688;" d="M370.4,182c-8-3.2-20.8-6.4-36.8-6.4c-40,0-61.6,20-61.6,48.8c0,21.6,12.8,32.8,28.8,40  s20.8,12,20.8,18.4c0,9.6-12.8,14.4-24,14.4c-16,0-24.8-2.4-38.4-8l-5.6-2.4l-5.6,32.8c9.6,4,27.2,8,45.6,8  c42.4,0,70.4-20,70.4-50.4c0-16.8-10.4-29.6-34.4-40c-14.4-7.2-23.2-11.2-23.2-18.4c0-6.4,7.2-12.8,23.2-12.8  c13.6,0,23.2,2.4,30.4,5.6l4,1.6L370.4,182L370.4,182z"></path>
+                <path style="fill:#3C58BF;" d="M439.2,180.4c-9.6,0-16.8,0.8-20.8,10.4l-60,133.6h43.2l8-24h51.2l4.8,24H504l-33.6-144H439.2z   M420.8,276.4c2.4-7.2,16-42.4,16-42.4s3.2-8.8,5.6-14.4l2.4,13.6c0,0,8,36,9.6,44h-33.6V276.4z"></path>
+                <path style="fill:#293688;" d="M448.8,180.4c-9.6,0-16.8,0.8-20.8,10.4l-69.6,133.6h43.2l8-24h51.2l4.8,24H504l-33.6-144H448.8z   M420.8,276.4c3.2-8,16-42.4,16-42.4s3.2-8.8,5.6-14.4l2.4,13.6c0,0,8,36,9.6,44h-33.6V276.4z"></path>
+                <path style="fill:#3C58BF;" d="M111.2,281.2l-4-20.8c-7.2-24-30.4-50.4-56-63.2l36,128h43.2l64.8-144H152L111.2,281.2z"></path>
+                <path style="fill:#293688;" d="M111.2,281.2l-4-20.8c-7.2-24-30.4-50.4-56-63.2l36,128h43.2l64.8-144H160L111.2,281.2z"></path>
+                <path style="fill:#FFBC00;" d="M0,180.4l7.2,1.6c51.2,12,86.4,42.4,100,78.4l-14.4-68c-2.4-9.6-9.6-12-18.4-12H0z"></path>
+                <path style="fill:#F7981D;" d="M0,180.4L0,180.4c51.2,12,93.6,43.2,107.2,79.2l-13.6-56.8c-2.4-9.6-10.4-15.2-19.2-15.2L0,180.4z"></path>
+                <path style="fill:#ED7C00;" d="M0,180.4L0,180.4c51.2,12,93.6,43.2,107.2,79.2l-9.6-31.2c-2.4-9.6-5.6-19.2-16.8-23.2L0,180.4z"></path>
+                <g>
+                  <path style="fill:#051244;" d="M151.2,276.4L124,249.2l-12.8,30.4l-3.2-20c-7.2-24-30.4-50.4-56-63.2l36,128h43.2L151.2,276.4z"></path>
+                  <polygon style="fill:#051244;" points="225.6,324.4 191.2,289.2 184.8,324.4  "></polygon>
+                  <path style="fill:#051244;" d="M317.6,274.8L317.6,274.8c3.2,3.2,4.8,5.6,4,8.8c0,9.6-12.8,14.4-24,14.4c-16,0-24.8-2.4-38.4-8   l-5.6-2.4l-5.6,32.8c9.6,4,27.2,8,45.6,8c25.6,0,46.4-7.2,58.4-20L317.6,274.8z"></path>
+                  <path style="fill:#051244;" d="M364,324.4h37.6l8-24h51.2l4.8,24H504L490.4,266l-48-46.4l2.4,12.8c0,0,8,36,9.6,44h-33.6   c3.2-8,16-42.4,16-42.4s3.2-8.8,5.6-14.4"></path>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                </svg>
+            </li> 
+            <li style="
+                    border: 0.5px solid #e0dede;
+                    width: 50px;
+                    border-radius: 10px;
+                    height: 30px;
+                    margin-right: 5px;
+                ">
+                <svg viewBox="0 0 160 100" version="1.1" height="30px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns="http://www.w3.org/2000/svg"><title></title><defs></defs><g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1"><g id="Paypal" transform="translate(-1.000000, 0.000000)"><path d="M152.76461,33.4570312 L148.564238,33.4570312 C148.56187,33.4570312 148.559501,33.4577998 148.557923,33.4577998 L148.555554,33.4570312 C147.594071,33.4570312 146.618378,34.174116 146.346037,35.0864199 C146.334986,35.1233117 146.31604,35.1586664 146.307357,35.1970954 C146.307357,35.1970954 146.207104,35.6421029 146.033437,36.4114511 L140.263746,61.8744917 C140.130339,62.4501578 140.041137,62.8252246 140.014298,62.9228342 L140.025349,62.9366686 C139.825632,63.8266838 140.375051,64.562983 141.27733,64.645221 L141.289171,64.6621297 L145.649001,64.6621297 C146.604169,64.6621297 147.573547,63.9519622 147.854571,63.051187 C147.867991,63.007378 147.889305,62.9666432 147.899567,62.9228342 L154.193416,35.1955582 L154.183943,35.1924839 C154.397869,34.2440567 153.7703,33.4570312 152.76461,33.4570312 Z M131.219833,58.4825217 C130.637259,58.8399112 130.021531,59.1458059 129.376595,59.4063543 C128.509839,59.7468351 127.688078,59.9251455 126.927891,59.9251455 C125.761165,59.9251455 124.864412,59.7645124 124.258156,59.4209573 C123.651111,59.0950796 123.332985,58.5286365 123.343247,57.7177851 C123.343247,56.7816552 123.565067,56.0553475 124.024495,55.48583 C124.487081,54.9378328 125.174644,54.4966681 126.027191,54.1677161 C126.875001,53.8879531 127.917793,53.6573793 129.12162,53.4921347 C130.19204,53.3607076 132.308409,53.1232165 132.579172,53.1216793 C132.849934,53.1193736 133.029916,52.974112 132.909139,53.6765938 C132.85546,53.9817198 132.244468,56.4242657 131.964233,57.5348631 C131.882925,57.8676581 131.428233,58.3526318 131.219833,58.4825217 C131.219833,58.4825217 131.428233,58.3526318 131.219833,58.4825217 Z M139.52585,41.3155288 C137.743396,40.3471185 134.955251,39.8575334 131.140104,39.8575334 C129.253449,39.8575334 127.357322,40.0051006 125.454879,40.2925494 C124.058439,40.5008345 123.914769,40.5354205 123.047224,40.719111 C121.262401,41.0972522 120.986902,42.8373163 120.986902,42.8373163 L120.413801,45.1322948 C120.08857,46.6002818 120.947432,46.539564 121.330289,46.4258142 C122.109422,46.1967775 122.531749,45.969278 124.121591,45.6188057 C125.641177,45.2829364 127.246807,45.0316109 128.527995,45.0416025 C130.406756,45.0416025 131.835561,45.2422017 132.785204,45.6280287 C133.735636,46.0315329 134.206115,46.718643 134.206115,47.7016563 C134.209273,47.9353045 134.215588,48.1558868 134.128755,48.3488003 C134.050604,48.5286479 133.900619,48.7023469 133.451453,48.7615275 C130.769878,48.9167806 128.845332,49.1550402 126.527667,49.4839923 C124.240789,49.7975727 122.239672,50.3348099 120.566944,51.0787949 C118.7837,51.8489116 117.449622,52.8795768 116.529976,54.1853934 C115.634802,55.4973587 115.184847,57.0860127 115.182478,58.9575039 C115.182478,60.7260054 115.835308,62.1686293 117.098341,63.2884497 C118.376372,64.3936671 120.038838,64.9408957 122.050217,64.9408957 C123.306935,64.9324413 124.290521,64.8440547 124.995451,64.6726614 C125.693277,64.5012682 126.454254,64.2576285 127.257858,63.9186849 C127.858588,63.6742766 128.506681,63.32073 129.191087,62.8772596 C129.876282,62.432252 130.350709,62.1163658 130.959333,61.7282332 L130.981436,61.765125 L130.810137,62.5006556 C130.809347,62.5075728 130.799085,62.5114157 130.799085,62.5183329 L130.804611,62.5321674 C130.608841,63.4183396 131.155892,64.1554074 132.057381,64.2422569 L132.068433,64.2576285 L132.148162,64.2576285 L132.151319,64.2614714 C132.749681,64.2614714 134.803688,64.2607028 135.763592,64.2576285 L136.433789,64.2576285 C136.477995,64.2576285 136.482731,64.2445626 136.500098,64.2345711 C137.420533,64.1246642 138.303077,63.3945136 138.510688,62.5183329 L141.939031,48.1113092 C142.017971,47.7723656 142.080333,47.3811586 142.117435,46.930771 C142.160062,46.4757719 142.210583,46.1014737 142.195585,45.8309337 C142.203479,43.7918921 141.303568,42.2847076 139.52585,41.3155288 L139.52585,41.3155288 Z M118.881377,38.0339225 C118.296435,36.9256308 117.413102,36.0333099 116.296108,35.338514 C115.150695,34.6452552 113.789778,34.1618187 112.214145,33.87975 C110.655878,33.6138215 108.803168,33.4616427 106.692325,33.4570312 L96.8706685,33.4616427 C95.8594532,33.4785515 94.8671833,34.2517425 94.6335223,35.2040126 L88.0302308,63.1818455 C87.7894653,64.1325784 88.4462421,64.9249839 89.4393014,64.9196039 L94.1519912,64.9111495 C95.1513656,64.9196039 96.1696855,64.1325784 96.4057147,63.1818455 L97.9987144,56.3922137 C98.2221133,55.4407122 99.238065,54.6436952 100.254017,54.6575297 L101.59362,54.6575297 C107.341997,54.6575297 111.798923,53.5077347 114.990448,51.2189048 C118.174079,48.9185461 119.776551,45.9011028 119.776551,42.1481289 C119.766289,40.5095172 119.479739,39.1291484 118.881377,38.0339225 Z M108.748699,47.1846307 C107.341997,48.1807098 105.367719,48.6802865 102.827445,48.6802865 L101.65914,48.6802865 C100.648714,48.6918152 99.9958844,47.8963353 100.235861,46.9425281 L101.644142,41.0044825 C101.854121,40.0652783 102.879545,39.2659555 103.875762,39.2736413 L105.41903,39.2659555 C107.22043,39.2736413 108.567928,39.5672387 109.498625,40.1505906 C110.413534,40.7408597 110.857174,41.6562379 110.864279,42.8759737 C110.868226,44.7351676 110.161717,46.1654942 108.748699,47.1846307" fill="#306FC5" id="pal"></path><path d="M85.8355974,39.8576594 C84.9412822,39.8576594 83.7682833,40.5665697 83.2130217,41.423313 C83.2130217,41.423313 77.2307975,51.4690748 76.643245,52.4729634 C76.3238468,53.0127254 76.0002367,52.6696156 75.9461846,52.4688378 C75.9026622,52.2247416 74.0922707,41.4893221 74.0922707,41.4893221 C73.8886982,40.6250153 72.9670061,39.8831004 71.8143644,39.8865383 L68.0840734,39.8920391 C67.1848445,39.8920391 66.6239671,40.5975115 66.8240297,41.4501292 C66.8240297,41.4501292 69.675449,57.2813147 70.2314126,61.0046412 C70.5086924,63.063988 70.2026316,63.4291009 70.2026316,63.4291009 L66.5060354,69.7425975 C65.9648133,70.5986532 66.2610464,71.3 67.1560635,71.3 L71.4788207,71.296562 C72.3738379,71.296562 73.5594723,70.5986532 74.0922707,69.7412223 L90.7220399,42.1913565 C90.7220399,42.1913565 92.3127135,39.8377191 90.8455874,39.8576594 C89.8452741,39.8714113 85.8355974,39.8576594 85.8355974,39.8576594 Z M54.6140586,58.4825217 C54.0314849,58.8399112 53.416546,59.1442687 52.7716101,59.4055858 C51.904854,59.7445293 51.0791466,59.924377 50.3213271,59.924377 C49.1577585,59.924377 48.2586373,59.7629752 47.6515923,59.4209573 C47.0453367,59.094311 46.7256316,58.5278679 46.7358938,57.7162479 C46.7358938,56.7824237 46.960082,56.0538103 47.4187207,55.4850614 C47.8820957,54.9362956 48.5665014,54.4943624 49.4190483,54.1661789 C50.269227,53.8848788 51.3151758,53.6573793 52.5150566,53.4921347 C53.5854766,53.3607076 55.7042135,53.1239851 55.9741867,53.1201422 C56.2425811,53.1193736 56.4233526,52.9725749 56.3025751,53.6750566 C56.250475,53.9801827 55.6386937,56.4242657 55.3584584,57.5340945 C55.2739931,57.8684266 54.8193014,58.3534003 54.6140586,58.4825217 C54.6140586,58.4825217 54.8193014,58.3534003 54.6140586,58.4825217 Z M62.9200757,41.3147602 C61.1376212,40.34635 58.3502665,39.8575334 54.5351191,39.8575334 C52.647675,39.8575334 50.7523369,40.0035635 48.8491049,40.2917808 C47.4502965,40.4985287 47.3097841,40.5338834 46.4414493,40.7175739 C44.6558372,41.0972522 44.3811276,42.8357791 44.3811276,42.8357791 L43.8080267,45.1322948 C43.4835852,46.5995132 44.3432367,46.5387954 44.7245146,46.4250457 C45.5020689,46.1960089 45.9267636,45.969278 47.5166057,45.6172685 C49.0338234,45.2829364 50.6418216,45.0323795 51.9214313,45.0408339 C53.8017709,45.0408339 55.2289976,45.2406646 56.1786401,45.6264915 C57.1298614,46.0299958 57.5979728,46.718643 57.5979728,47.7008877 C57.6042879,47.9345359 57.6090243,48.1558868 57.524559,48.3472631 C57.4448301,48.5286479 57.2932662,48.7015783 56.8441003,48.7599903 C54.1656821,48.9175492 52.2419258,49.1550402 49.9203143,49.4839923 C47.6334362,49.7975727 45.6331086,50.3348099 43.9595906,51.0780263 C42.1763466,51.848143 40.8438474,52.8803453 39.9257807,54.1853934 C39.0274489,55.4965901 38.578283,57.0852441 38.5767042,58.9575039 C38.5767042,60.7252368 39.2303235,62.1686293 40.4917771,63.2876811 C41.7705975,64.3928985 43.4314851,64.9408957 45.4428643,64.9408957 C46.700371,64.9324413 47.6831681,64.8425175 48.3904663,64.6726614 C49.0875023,64.499731 49.8492687,64.2576285 50.6497155,63.9186849 C51.2528135,63.6742766 51.8993283,63.3191928 52.5845234,62.876491 C53.2681397,62.432252 53.7449344,62.1163658 54.3559264,61.7282332 L54.3748719,61.7643564 L54.2035731,62.4991185 C54.2019943,62.5060357 54.1925216,62.5106472 54.1925216,62.5191015 L54.1996261,62.5306302 C54.0038561,63.4191082 54.5493282,64.1554074 55.451607,64.2407197 L55.4626586,64.2576285 L55.5415981,64.2576285 L55.5439663,64.2630085 C56.1439067,64.2630085 58.1987026,64.2599342 59.1562391,64.2576285 L59.827225,64.2576285 C59.8722206,64.2576285 59.8785357,64.2430255 59.8927449,64.2338025 C60.8155479,64.1208213 61.6949343,63.3922079 61.9049134,62.5191015 L65.3332571,48.1105406 C65.4106178,47.7723656 65.4737695,47.3811586 65.5085029,46.9315396 C65.5542878,46.4742347 65.6040197,46.1014737 65.5906,45.8317022 C65.5984939,43.7911235 64.6970045,42.283939 62.9200757,41.3147602 Z M41.47554,38.0339225 C40.8905981,36.9256308 40.0072648,36.0333099 38.8902705,35.338514 C37.7448579,34.6452552 36.3839405,34.1618187 34.8083075,33.87975 C33.2500412,33.6138215 31.3973305,33.4616427 29.2864875,33.4570312 L19.4648315,33.4616427 C18.4536161,33.4785515 17.4613462,34.2517425 17.2276852,35.2040126 L10.6243937,63.1818455 C10.3836282,64.1325784 11.0404051,64.9249839 12.0334643,64.9196039 L16.7461541,64.9111495 C17.7455285,64.9196039 18.7638485,64.1325784 18.9998776,63.1818455 L20.5928773,56.3922137 C20.8162762,55.4407122 21.8322279,54.6436952 22.8481796,54.6575297 L24.1877834,54.6575297 C29.9361598,54.6575297 34.3930856,53.5077347 37.5846107,51.2189048 C40.7682418,48.9185461 42.3707142,45.9011028 42.3707142,42.1481289 C42.3604521,40.5095172 42.0739016,39.1291484 41.47554,38.0339225 Z M31.3428622,47.1846307 C29.9361598,48.1807098 27.9618822,48.6802865 25.4216082,48.6802865 L24.2533032,48.6802865 C23.2428773,48.6918152 22.5900474,47.8963353 22.8300235,46.9425281 L24.2383047,41.0044825 C24.4482839,40.0652783 25.4737083,39.2659555 26.4699252,39.2736413 L28.0131929,39.2659555 C29.814593,39.2736413 31.1620907,39.5672387 32.0927877,40.1505906 C33.0076969,40.7408597 33.451337,41.6562379 33.4584416,42.8759737 C33.4623885,44.7351676 32.7558798,46.1654942 31.3428622,47.1846307" fill="#265697" id="pay"></path>
+                </g></g>
+              </svg>
+            </li>	
+            <li style="
+              border: 0.5px solid #e0dede;
+              width: 50px;
+              border-radius: 10px;
+              height: 30px;
+              margin-right: 5px;
+          ">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="30px" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="30px" xml:space="preserve"><g id="_x33_71-wechat">
+              <g><g>
+                <path d="M342.248,169.517c8.712,0,17.221,0.724,25.616,1.759C352.687,104.625,282.682,54.21,198.503,54.21     c-95.28,0-172.502,64.541-172.502,144.134c0,45.889,25.819,86.602,65.866,112.945l-22.742,45.605l61.953-26.608     c13.285,4.731,27.09,8.627,41.835,10.44c-2.015-8.796-3.16-17.813-3.16-27.068C169.753,234.178,247.115,169.517,342.248,169.517z      M256.003,119.066c11.905,0,21.56,9.685,21.56,21.623c0,11.942-9.654,21.62-21.56,21.62c-11.912,0-21.563-9.678-21.563-21.62     C234.44,128.75,244.091,119.066,256.003,119.066z M141.001,162.309c-11.907,0-21.562-9.678-21.562-21.62     c0-11.938,9.656-21.623,21.562-21.623s21.563,9.685,21.563,21.623C162.563,152.631,152.906,162.309,141.001,162.309z" style="fill:#51C332;"></path>
+                <path d="M485.999,313.656c0-63.684-64.376-115.312-143.751-115.312     c-79.378,0-143.745,51.628-143.745,115.312c0,63.679,64.367,115.308,143.745,115.308c13.054,0,25.471-1.845,37.519-4.465     l77.483,33.291l-26.798-53.701C464.035,382.983,485.999,350.527,485.999,313.656z M299.125,306.448     c-11.906,0-21.563-9.681-21.563-21.625c0-11.938,9.656-21.616,21.563-21.616c11.91,0,21.561,9.682,21.561,21.616     C320.686,296.768,311.033,306.448,299.125,306.448z M385.373,306.448c-11.912,0-21.561-9.681-21.561-21.625     c0-11.938,9.648-21.616,21.561-21.616c11.911,0,21.563,9.682,21.563,21.616C406.936,296.768,397.284,306.448,385.373,306.448z" style="fill:#51C332;"></path>
+              </g></g>
+            </g><g id="Layer_1"></g>
+          </svg>
+            </li>
+            <li style="
+            border: 0.5px solid #e0dede;
+            width: 50px;
+            border-radius: 10px;
+            height: 30px;
+            margin-right: 5px;
+        ">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="25px" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 450" width="25px" xml:space="preserve"><g id="_x31_3-alipay"><g><path d="M413.858,26.001H98.143c-39.892,0-72.141,32.251-72.141,72.142v315.715    c0,39.89,32.249,72.142,72.141,72.142h315.716c39.551,0,71.628-31.911,72.14-71.463c-47.189-26.308-113.55-61.955-176.194-90.809    c-32.928,45.146-86.394,83.169-152.6,83.169c-72.482,0-96.24-46.513-99.641-78.416c-4.075-40.056,15.279-83.683,102.186-83.683    c36.328,0,81.476,10.524,130.537,25.629c16.972-30.896,27.156-61.956,27.156-61.956H134.471v-17.147h94.546v-32.077H116.645    v-19.519h112.372V87.957h52.284v51.771h112.371v19.519H281.289v32.077h91.148c0,0-15.617,47.868-39.378,93.355    c50.24,17.147,102.688,37.006,152.601,54.151V98.143C485.826,58.417,453.584,26.001,413.858,26.001z M74.547,324.742    c1.018,20.711,10.524,55.171,71.803,55.171c53.464,0,95.061-40.744,121.027-74.852c-45.824-19.182-86.742-32.252-112.372-32.252    C85.749,272.81,73.531,306.752,74.547,324.742z" style="fill:#0099E5;"></path></g></g><g id="Layer_1"></g>
+              </svg>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-content">
+      <p class="footer-text">快来官方育碧商城寻找你喜爱的英雄们。全年提供全新商品、专属典藏版和惊人促销优惠：只卖 Ubisoft 最棒产品！从 季票 到周边，让你享受完整的游戏体验。育碧商城让你在PC上体验精彩冒险：在《刺客信条：奥德赛》里写下你的奥德赛史诗，或在《全境封锁2》里化身国土战略局特工，或加入《彩虹六号：围攻》特勤小队。</p>
+    </div>
+    <div class="footer-contact">
+      <div class="footer-links">
+        <div class="footer-asset">
+          <span>认识我们</span>
+          <ul class="link-list">
+            <li><a href="###">关于 Ubisoft</a></li>
+            <li><a href="###">招聘信息</a></li>
+            <li><a href="###">Ubisoft Club</a></li>
+            <li><a href="###">Ubisoft.com</a></li>
+            <li><a href="###">Support.com</a></li>
+            <li><a href="###">关于商店</a></li>
+            <li><a href="###">周边商城</a></li>
+          </ul>
+        </div>
+        <div class="footer-asset">
+          <span>发现更多</span>
+          <ul class="link-list">
+            <li><a href="###">游戏</a></li>
+            <li><a href="###">其他内容</a></li>
+            <li><a href="###">特惠</a></li>
+            <li><a href="###">商店好礼</a></li>
+          </ul>
+        </div>
+        <div class="footer-asset">
+          <span>让我们帮助你</span>
+          <ul class="link-list">
+            <li><a href="###">常见问题/帮助</a></li>
+            <li><a href="###">你的账单</a></li>
+            <li><a href="###">你的订单</a></li>
+            <li><a href="###">隐私政策</a></li>
+            <li><a href="###">条款与销售细则</a></li>
+            <li><a href="###">法律声明</a></li>
+            <li><a href="###">下载Uplay PC</a></li>
+            <li><a href="###">退货与换货</a></li>
+            <li><a href="###">撤销申请表格</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-social-legal">
+      <div class="footer-legal">
+        <div class="footer-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150">
+            <path d="M104.033 82.966c-8.482 19.127-25.965 29.167-44.573 28.908-35.745-1.731-46.131-42.843-22.243-57.643l1.038 1.039c-.433.52-1.817 1.644-4.068 5.972-2.596 5.28-3.375 10.559-3.116 13.848 1.905 28.734 42.237 34.533 56.172 6.145C104.985 42.287 57.989 2.82 16.358 33.026l-.952-.952C26.398 15.024 47.776 7.321 68.2 12.428c31.332 7.79 48.122 40.245 35.832 70.538m-33.408-.606c-2.856 4.154-7.703 6.838-13.156 6.838-8.828 0-16.012-7.098-16.012-15.926 0-8.395 6.578-15.32 14.887-15.925 5.193-.173 10.04 2.597 12.29 7.097 2.51 4.847 1.558 10.819-2.25 14.887 1.298.952 2.77 1.99 4.24 3.03M14.628 71.8c-.779 6.318-.26 8.309-.26 9.088l-1.384.519c-.52-1.039-1.905-4.674-2.51-9.607C8.915 53.02 21.81 36.056 41.458 32.853c18.002-2.596 35.225 8.482 39.293 24.061l-1.385.52c-.432-.433-1.211-1.731-3.894-4.501-21.81-21.724-55.912-11.77-60.845 18.868m102.995-10.473C116.323-.902 33.235-24.01 1.212 34.238c1.384 1.039 3.375 2.424 4.76 3.376a62.228 62.228 0 0 0-5.02 15.492A59.657 59.657 0 0 0 0 63.58C0 95.862 26.311 122 58.768 122c32.456 0 58.767-26.138 58.767-58.421.173-.693.173-1.472.087-2.25M358.74 60.763c0 24.9-17.897 43.834-43.056 43.834-25.764 0-43.056-18.502-43.056-40.895 0-14.525 5.706-25.073 14.006-31.99l-2.94-2.939c6.399-6.657 18.157-11.845 31.99-11.845 25.16 0 43.056 19.108 43.056 43.835zm-18.675 0c0-15.217-9.683-26.37-24.467-26.37-8.56 0-15.044 3.285-18.848 7.522l2.94 2.94c-4.496 3.717-8.473 8.991-8.473 18.242 0 12.796 9.078 24.122 24.467 24.122 14.698-.087 24.381-11.24 24.381-26.456zM412.776 103.127l-15.821-33.2h-9.338v33.2h-18.415V18.398h31.816c16.86 0 27.84 10.807 27.84 25.765 0 10.548-5.36 19.02-14.439 23.084l18.07 35.794h-19.713zm-25.159-48.244h13.315c6.138 0 10.029-3.977 10.029-10.202 0-6.224-3.89-10.202-10.03-10.202h-13.314zM266.922 35.776h-23.69v67.264h-18.415V35.776h-23.862V18.398h65.967zM170.608 52.636c14.525 5.1 22.047 11.585 22.047 24.727 0 17.55-13.401 27.234-29.31 27.234-14.61 0-25.937-6.571-30.606-18.675l14.612-10.894c2.68 7.608 9.597 12.364 16.427 12.364 6.052 0 10.375-3.286 10.375-8.733 0-5.1-3.286-8.213-15.39-12.622-13.055-4.756-22.738-11.24-22.738-25.333 0-13.573 11.24-23.862 27.58-23.862 12.969 0 22.998 5.187 27.753 15.476L176.746 42.52c-2.766-6.311-7.176-9.77-13.833-9.77-5.533 0-9.683 3.026-9.683 7.35.086 5.014 4.669 8.04 17.378 12.536zM460.933 35.776v17.897h34.756V67.68h-34.756v17.897h39.598v17.465h-58.013V18.31h56.976v17.465z"></path>
+          </svg>
+        </div>
+        <p>2001-2019 Ubisoft Entertainment. All Rights Reserved. Ubisoft, Ubi.com and the Ubisoft logo are trademarks of Ubisoft Entertainment in the U.S and/or other countries</p>
+      </div>
+      <div class="footer-social">
+        <ul class="social-list">
+          <li>
+            <div class="qr-code">
+              <img class="qr-mouse" src="http://cdn.hommk.com/pcgame/ubi2015/img/ubi_mobile_qr.jpg">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="30px" height="30px" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 2048 1728"><path d="M580 429q0-41-25-66t-66-25q-43 0-76 25.5T380 429q0 39 33 64.5t76 25.5q41 0 66-24.5t25-65.5zm743 507q0-28-25.5-50t-65.5-22q-27 0-49.5 22.5T1160 936q0 28 22.5 50.5t49.5 22.5q40 0 65.5-22t25.5-51zm-236-507q0-41-24.5-66T997 338q-43 0-76 25.5T888 429q0 39 33 64.5t76 25.5q41 0 65.5-24.5T1087 429zm635 507q0-28-26-50t-65-22q-27 0-49.5 22.5T1559 936q0 28 22.5 50.5t49.5 22.5q39 0 65-22t26-51zm-266-397q-31-4-70-4-169 0-311 77T851.5 820.5 770 1108q0 78 23 152-35 3-68 3-26 0-50-1.5t-55-6.5-44.5-7-54.5-10.5-50-10.5l-253 127 72-218Q0 933 0 646q0-169 97.5-311t264-223.5T725 30q176 0 332.5 66t262 182.5T1456 539zm592 561q0 117-68.5 223.5T1794 1517l55 181-199-109q-150 37-218 37-169 0-311-70.5T897.5 1364 816 1100t81.5-264T1121 644.5t311-70.5q161 0 303 70.5t227.5 192T2048 1100z" fill="#008aa4"></path></svg>
+              </div>
+                <style> 
+                  .qr-mouse
+                  {
+                      height:100px;
+                      width:100px;
+                      border:7px solid #008AA4;
+                      border-radius:10px;
+                      position:absolute; 
+                      transition: 600ms;
+                      margin-top:-100px;
+                      overflow:hidden;
+                      opacity:0;
+                      margin-left:-35px;
+                  }
+                  .qr-code:hover .qr-mouse{
+                  display:block;
+                  opacity:1;
+                  overflow:hidden;
+                  margin-top:-120px;
+                }
+            </style>
+          </li>
+          <li>
+            <a href="https://weibo.com/ubisoft " data-aa-tracking="1" data-aa-category="Social" data-aa-action="Footer - Weibo" target="_blank" title="Weibo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26px" height="30px" viewBox="0, 0, 300, 300"><defs xmlns="http://www.w3.org/2000/svg">
+            <style>.cls-1 {fill: #008aa4;fill-rule: evenodd;}</style>
+              </defs><path d="M196.802 39.964c-8.656 3.787-10.64 12.803-4.328 19.115 3.066 3.066 5.951 3.607 18.574 3.607 17.673 0 29.575 4.688 38.592 15.148 11 12.443 12.263 16.23 12.263 38.952 0 20.197 0 20.558 4.688 23.263 10.82 6.131 18.034-1.443 20.558-21.64 3.246-26.329-12.443-56.986-36.066-71.052-15.509-9.016-42.018-12.623-54.281-7.393zm-88.724 33.542c-20.198 7.213-39.674 21.099-60.592 43.46-49.592 52.658-46.346 102.791 8.295 129.48 56.805 27.771 133.267 18.574 174.924-21.099 31.198-29.575 27.411-66.724-8.115-79.347-6.312-2.164-8.296-3.787-7.394-5.771 3.246-7.934 4.328-17.131 2.525-22.541-5.591-17.132-25.968-21.099-56.264-10.82l-12.083 4.147 1.082-12.082c1.263-14.246-1.803-22.001-10.279-26.329-7.033-3.607-20.558-3.246-32.099.902zm50.133 69.789c26.869 7.394 43.28 23.624 43.28 42.919 0 21.46-19.116 40.756-50.133 51.035-16.591 5.41-47.428 6.492-62.576 2.344-28.673-8.115-44.903-23.984-44.903-44.362 0-11.181 4.869-20.919 15.509-30.837 9.918-9.377 17.492-13.886 32.099-18.755 22.001-7.393 45.625-8.295 66.724-2.344zm-56.806 17.492c-18.213 8.476-27.951 21.46-27.951 37.69 0 14.788 6.492 24.886 20.738 32.46 11 5.951 31.198 5.41 43.461-.901 15.689-8.296 25.968-23.624 25.968-38.592-.181-12.263-11.001-26.87-23.804-32.099-10.279-4.328-27.592-3.607-38.412 1.442zm13.165 33.903c1.262 1.262 2.164 4.328 2.164 7.033 0 9.017-15.148 16.411-21.28 10.279-3.426-3.426-2.524-11.902 1.443-15.869 3.967-3.968 14.246-4.869 17.673-1.443zm85.298-117.758c-8.296 8.296-2.705 18.214 10.459 18.214 11.361 0 16.41 5.771 16.41 18.755 0 8.115.722 10.459 3.968 12.623 9.738 6.853 17.673-.721 17.673-16.771 0-19.656-14.067-34.444-34.084-35.887-9.016-.721-11.18-.18-14.426 3.066z" class="cls-1"></path>
+            </svg></a>
+          </li>                   
+          <li>
+            <a href="https://space.bilibili.com/16836724/#/" data-aa-tracking="1" data-aa-category="Social" data-aa-action="Footer - BiliBili" target="_blank" title="Bilibili">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="26px" height="30px" viewBox="0 0 32.282 28.563">
+              <defs>
+                <style>.cls-1 {fill: #008aa4;fill-rule: evenodd;}</style></defs>
+                  <path d="M32.280,26.876 C31.401,26.876 30.556,26.881 29.710,26.868 C29.639,26.866 29.515,26.747 29.508,26.674 C29.379,25.355 29.266,24.034 29.146,22.714 C29.034,21.487 28.918,20.260 28.804,19.033 C28.687,17.770 28.571,16.506 28.454,15.242 C28.447,15.169 28.434,15.097 28.417,14.986 C28.729,14.951 29.032,14.889 29.334,14.889 C30.155,14.888 30.975,14.910 31.795,14.929 C32.006,14.934 32.097,15.074 32.109,15.264 C32.135,15.659 32.172,16.054 32.174,16.449 C32.181,18.311 32.166,20.173 32.183,22.036 C32.197,23.523 32.247,25.010 32.280,26.497 C32.282,26.590 32.280,26.684 32.280,26.876 ZM32.048,13.515 C31.488,13.489 30.953,13.464 30.351,13.436 C30.351,11.966 30.351,10.494 30.351,8.991 C30.786,8.991 31.249,8.986 31.710,8.994 C31.942,8.998 32.060,9.088 32.056,9.360 C32.039,10.648 32.048,11.937 32.048,13.225 C32.048,13.308 32.048,13.391 32.048,13.515 ZM28.106,9.005 C28.566,9.005 29.026,9.013 29.484,9.002 C29.693,8.996 29.768,9.039 29.761,9.270 C29.744,9.889 29.769,10.509 29.771,11.129 C29.774,11.897 29.772,12.665 29.772,13.429 C29.308,13.475 28.898,13.516 28.461,13.560 C28.345,12.068 28.228,10.574 28.106,9.005 ZM27.406,25.440 C26.613,25.367 25.819,25.310 24.964,25.243 C24.234,18.029 23.615,10.733 22.197,3.480 C22.657,3.428 23.119,3.366 23.583,3.325 C24.121,3.279 24.661,3.259 25.199,3.214 C25.646,3.177 25.816,3.294 25.846,3.722 C25.928,4.868 25.999,6.015 26.079,7.162 C26.188,8.712 26.301,10.263 26.413,11.813 C26.494,12.931 26.567,14.050 26.660,15.167 C26.760,16.386 26.879,17.604 26.990,18.823 C27.072,19.723 27.148,20.624 27.238,21.523 C27.335,22.496 27.445,23.469 27.549,24.442 C27.578,24.721 27.610,25.001 27.629,25.281 C27.640,25.435 27.555,25.454 27.406,25.440 ZM22.639,19.714 C22.737,20.621 22.835,21.528 22.945,22.434 C23.062,23.405 23.195,24.374 23.319,25.343 C23.356,25.631 23.387,25.918 23.423,26.229 C22.512,26.343 21.621,26.454 20.685,26.570 C19.899,22.647 19.121,18.758 18.327,14.796 C18.970,14.707 19.595,14.608 20.222,14.536 C20.672,14.485 21.127,14.480 21.578,14.438 C21.823,14.415 21.979,14.501 22.018,14.734 C22.121,15.355 22.228,15.975 22.303,16.600 C22.428,17.636 22.526,18.676 22.639,19.714 ZM19.542,8.552 C20.051,8.544 20.559,8.531 21.066,8.532 C21.232,8.532 21.309,8.624 21.326,8.802 C21.460,10.187 21.605,11.572 21.752,13.008 C21.224,13.041 20.684,13.076 20.132,13.111 C19.935,11.588 19.742,10.101 19.542,8.552 ZM17.382,8.981 C17.876,8.909 18.367,8.830 18.859,8.768 C19.077,8.740 19.036,8.927 19.050,9.044 C19.108,9.539 19.155,10.035 19.209,10.530 C19.293,11.306 19.380,12.082 19.463,12.858 C19.474,12.960 19.464,13.064 19.464,13.175 C19.045,13.256 18.634,13.337 18.206,13.420 C17.932,11.945 17.660,10.479 17.382,8.981 ZM18.674,23.121 C18.449,23.787 17.992,24.291 17.415,24.730 C16.060,25.761 14.640,26.690 13.007,27.217 C11.863,27.586 10.675,27.866 9.484,28.045 C7.917,28.281 6.328,28.386 4.747,28.533 C4.423,28.563 4.092,28.520 3.764,28.521 C3.596,28.522 3.553,28.439 3.545,28.294 C3.503,27.589 3.468,26.883 3.405,26.179 C3.324,25.270 3.229,24.363 3.123,23.457 C2.975,22.196 2.811,20.936 2.652,19.677 C2.484,18.352 2.311,17.028 2.145,15.703 C1.982,14.406 1.836,13.106 1.664,11.810 C1.468,10.329 1.253,8.850 1.045,7.369 C0.798,5.619 0.466,3.886 0.003,2.177 C-0.018,2.102 0.046,1.942 0.110,1.917 C1.643,1.313 3.183,0.727 4.717,0.128 C5.228,-0.072 5.273,-0.129 5.273,0.495 C5.277,3.175 5.290,5.856 5.331,8.536 C5.352,9.931 5.406,11.327 5.504,12.719 C5.624,14.418 5.807,16.112 5.965,17.809 C5.972,17.881 6.004,17.951 6.017,17.994 C6.631,17.968 7.198,17.932 7.766,17.922 C10.214,17.882 12.612,18.167 14.898,19.065 C16.014,19.503 17.096,20.009 18.067,20.725 C18.865,21.312 19.039,22.041 18.674,23.121 ZM8.381,20.765 C8.613,22.424 8.843,24.070 9.081,25.771 C10.500,24.724 11.892,23.696 13.284,22.669 C13.108,22.428 9.282,20.960 8.381,20.765 Z" class="cls-1"></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+  <script language=javascript src='js/UB_store.js'></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+/************商城页面底部**************/
+.footer-icon-list{
+  padding:30px 0;
+  background:#fff;
+}
+.footer-icon-list::after{
+  content:"";
+  display:block;
+  clear:both;
+  margin:20px 0;
+}
+.footer-icon-item{
+  float:left;
+  width:25%;
+  text-align:center;
+}
+.footer-icon-item a{
+  width:60%;
+}
+.footer-icon-item p{
+  color:#000;
+  letter-spacing: 2px;
+  margin-top:10px;
+}
+.footer-icon-item ul{
+  display:block !important;
+}
+.footer-icon-item ul li{
+  display: inline-block
+}
+.footer-content{
+  padding:5% 10%;
+  background-color: #000;
+}
+.footer-text{
+  color: #6b6b6b;
+  font-size: 1.125rem;
+  line-height: 24px;
+}
+
+.footer-contact{
+  padding: 0 10% 5%;
+  display:flex;
+  background:#000;
+}
+.footer-links{
+  width:100%;
+  display:flex;
+  justify-content:space-around;
+}
+.footer-asset{
+  height:100%;
+}
+.footer-asset span{
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 45px;
+  margin-right: 10px;
+  font-size: 1rem;
+  margin: 0 0 55px;
+}
+.link-list a{
+  color: #008aa4;
+  font-size: .9375rem;
+  line-height: 2;
+}
+
+
+.footer-social-legal{
+  display: flex;
+  padding: 20px 50px;
+  background-color: #2a2c2e;
+}
+.footer-legal{
+  width: 75%;
+}
+.footer-legal>p{
+  width:75%;
+  margin: 0;
+  float: right;
+  font-size: .75rem;
+  line-height: 1.125rem;
+  text-align: center;
+  color: #fff;
+}
+.footer-social{
+  width: 25%;
+}
+.footer-logo{
+  width:100px;height:30px;
+}
+.footer-logo path{
+  fill:#fff;
+}
+
+.social-list{
+  display:flex;
+  width:100%;
+  justify-content:flex-end;
+}
+.social-list li{
+  margin:0 10px;
+}
